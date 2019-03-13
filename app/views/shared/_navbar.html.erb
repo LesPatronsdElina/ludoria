@@ -28,7 +28,7 @@
       <div class="nav">
         <div class="nav-wrapper">
           <nav class= "d-flex align-item-center border-dashed-blue">
-            <div class="width-240px mx-auto text-right">
+            <div class="max-width-240px mx-auto text-right">
               <% if user_signed_in? %>
                 <%= link_to "Se Déconnecter", destroy_user_session_path, class: "navbar-link text-blue", method: :delete %>
               <% else %>
@@ -39,7 +39,24 @@
                 </div>
               <% end %>
               <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
-              <%= link_to "Accueil", root_path, class: "navbar-link text-blue" %>
+              <%= link_to "Mes mesures", '/',  class: "navbar-link text-blue" %>
+                <div class="text-grey">
+                  <p>Je prends mes mseures</p>
+                  <p>Mon formulaire</p>
+                </div>
+              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <%= link_to "La maison Ludoria", '/',  class: "navbar-link text-blue" %>
+              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <%= link_to "Les offres", '/',  class: "navbar-link text-blue" %>
+              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <%= link_to "Le Blog", '/',  class: "navbar-link text-blue" %>
+              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <%= link_to "Mes mesures", '/',  class: "navbar-link text-blue" %>
+              <div class="text-grey">
+                <p>Les collections de patrons</p>
+                <p>Le corsage & la jupe de base</p>
+                <p>Le mannequin de couture</p>
+              </div>
             </div>
           </nav>
         </div>
