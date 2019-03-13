@@ -208,6 +208,7 @@
 
 nav {
   height: calc(100vh - 40px);
+  min-height: 700px;
   margin: 20px;
   text-align: center;
   display: -webkit-box;
@@ -237,8 +238,13 @@ nav a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-nav .text-blue {
-  color: $blue;
+nav {
+  .text-blue: {
+    color: $blue;
+  }
+  .text-blue:hover {
+    color: $blue;
+  }
 }
 nav a:hover {
   -webkit-transition: all 0.3s ease;
