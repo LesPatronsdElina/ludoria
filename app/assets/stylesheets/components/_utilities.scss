@@ -1,3 +1,30 @@
-.page-min-height {
-  min-height: calc(100vh - 170px)
+p, a, h1, h2, h3, h4{
+  font-family: 'Raleway', 'sans-serif';
 }
+.border-top-white-transparent {
+  border-top: 1px solid rgba(255, 255, 255, 0.5)
+}
+.font-size-48px {
+  font-size: 48px;
+}
+.margin-x-05 {
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.opacity05 {
+  opacity: 0.5;
+}
+.page-min-height {
+  min-height: 100vh;
+}
+.width-33 {
+  width: 33%;
+}
+.wrapper-body {
+  background: white;
+  z-index: 3;
+}
+
+
+
+
