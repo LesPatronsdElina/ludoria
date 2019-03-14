@@ -28,7 +28,12 @@
   height: 160px;
   width: 160px;
 }
-.square-220px {
+.square-220px-responsive {
   height: 220px;
   width: 220px;
+  @media (max-width: 991px){
+    height: 180px;
+    width: 180px;
+  }
+
 }

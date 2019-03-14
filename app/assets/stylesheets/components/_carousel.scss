@@ -2,8 +2,20 @@
   opacity: 1 !important;
 }
 .height-carousel-home {
-  min-height: 280px;
+  min-height: 300px;
   @media (max-width: 1199px) {
-    min-height: 400px;
+    min-height: 440px;
+  }
+  @media (max-width: 575px) {
+    min-height: 800px;
+  }
+}
+.margin-top-steps-home {
+  margin-top: 100px;
+  @media (max-width: 991px) {
+    margin-top: 80px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 20px;
   }
 }
