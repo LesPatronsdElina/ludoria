@@ -1,0 +1,9 @@
+.carousel-control-prev, .carousel-control-next {
+  opacity: 1 !important;
+}
+.height-carousel-home {
+  min-height: 280px;
+  @media (max-width: 1199px) {
+    min-height: 400px;
+  }
+}

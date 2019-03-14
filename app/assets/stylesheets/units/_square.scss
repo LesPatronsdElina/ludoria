@@ -1,0 +1,34 @@
+.square-green {
+  background: $green;
+  border: 2px dashed $white;
+  outline: $green solid 10px;
+}
+.square-white-border-green {
+  background: $white;
+  border: 2px dashed $green;
+  outline: $green solid 2px;
+  outline-offset: 8px;
+}
+.square-blue {
+  background: $blue;
+  border: 2px dashed $white;
+  outline: $blue solid 10px;
+}
+.square-white-border-blue {
+  background: $white;
+  border: 2px dashed $blue;
+  outline-offset: 8px;
+  outline: $blue solid 2px;
+}
+.square-50px {
+  height: 50px;
+  width: 50px;
+}
+.square-160px {
+  height: 160px;
+  width: 160px;
+}
+.square-220px {
+  height: 220px;
+  width: 220px;
+}

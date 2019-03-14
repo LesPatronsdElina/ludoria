@@ -1,3 +1,37 @@
+.bg-green {
+  background-color: $green;
+}
+.circle {
+  border-radius: 50%;
+}
+.font-size-24px {
+  font-size: 24px;
+}
+.font-size-30px {
+  font-size: 30px;
+}
+.font-size-40px {
+  font-size: 40px;
+}
+.font-size-80px {
+  font-size: 80px;
+}
 .page-min-height {
   min-height: calc(100vh - 170px)
+}
+.text-blue {
+  color: $blue;
+}
+.text-green {
+  color: $green;
+}
+.min-height-250px {
+  min-height: 250px;
+}
+.marginy-20px {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.width-105px {
+  width: 105px;
 }
