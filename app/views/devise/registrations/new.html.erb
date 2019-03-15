@@ -1,25 +1,59 @@
 <h2>Sign up</h2>
-
+<div class="sign-up-container mx-auto">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.input_field :email,
+                autofocus: true,
+                placeholder: 'email',
+                input_html: { autocomplete: "email" },
+                class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
+    <%= f.input_field :password,
+                placeholder: 'Mot de passe',
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" },
+                 class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3"%>
+    <%= f.input_field :password_confirmation,
+                placeholder: 'confirmation mot de passe',
+                input_html: { autocomplete: "new-password" },
+                class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
+
+  <div class="row">
+    <div class="col-12 col-sm-8">
+      <%= f.input :conditions_validation, as: :boolean, label: " Je confirme avoir pris connaissance  <a href='/'>des conditions générales de vente et d’utilisation</a> ".html_safe, error: false %>
+    </div>
+     <div class="col-12 col-sm-4">
+      <%= f.submit "ok", class: 'px-4 py-2 text-white bg-green border-radius-20px border-0' %>
+    </div>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
+
+
+
+
+<div class="page-min-height d-flex justify-content-center align-items-center">
+  <div class="frame-log-in d-flex align-items-center justify-content-center" style="background: url( <%= image_url "log-in-bg.jpg" %>);">
+    <div class="frame-300px bg-white text-center py-5 px-4 position-relative">
+      <p class="text-green font-size-24px">Bienvenue</p>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.input_field :email,
+                        placeholder: 'email',
+                        input_html: { autocomplete: "email" }, class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
+            <%= f.input_field :password,
+                        placeholder: 'Mot de passe',
+                        class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3",
+                        input_html: { autocomplete: "current-password" } %>
+
+          <div class="form-actions">
+            <%= f.submit "Se connecter", class: 'px-4 py-2 w-75 text-white bg-green border-radius-20px border-0' %>
+          </div>
+        <% end %>
+        <p><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey position-bottom-right font-weight-light" %></p>
+<!--       <%= link_to "Forgot your password?", new_password_path(resource_name) %> -->
+    </div>
+  </div>
+</div>
