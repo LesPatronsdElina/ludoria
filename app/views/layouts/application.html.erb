@@ -15,9 +15,10 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="wrapper-body">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
-
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",

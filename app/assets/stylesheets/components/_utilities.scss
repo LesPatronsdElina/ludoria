@@ -5,8 +5,17 @@ body {
 .bg-green {
   background-color: $green;
 }
+.bg-white {
+  background: $white;
+}
 .circle {
   border-radius: 50%;
+}
+.font-size-responsive-80px-40px {
+  font-size: 80px;
+  @media (max-width: 767px) {
+    font-size: 40px;
+  }
 }
 .font-size-16px {
   font-size: 16px;
@@ -38,15 +47,6 @@ body {
 .letter-spacing {
   letter-spacing: .08rem;
 }
-.page-min-height {
-  min-height: calc(100vh - 170px)
-}
-.text-blue {
-  color: $blue;
-}
-.text-green {
-  color: $green;
-}
 .min-height-250px {
   min-height: 250px;
 }
@@ -60,4 +60,28 @@ body {
 .max-width-1140px {
   max-width: 1140px;
 }
-
+.page-min-height {
+  min-height: calc(100vh - 170px)
+}
+.position-bottom-center {
+  position: absolute;
+  bottom: 5px;
+  transform: translate(50%);
+  right: 50%;
+}
+.text-blue {
+  color: $blue;
+}
+.text-dark-grey {
+  color: $dark-grey
+}
+.text-green {
+  color: $green;
+}
+.section-shadow {
+  box-shadow: 0px -2px 4px rgba(229, 229, 229, 0.5);
+}
+.wrapper-body {
+  background: $white;
+  z-index: 3;
+}

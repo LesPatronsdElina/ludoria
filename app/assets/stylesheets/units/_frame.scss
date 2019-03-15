@@ -1,39 +1,50 @@
-.square-green {
+.frame-green {
   background: $green;
   border: 2px dashed $white;
   outline: $green solid 10px;
 }
-.square-white-border-green {
+.frame-white-border-green {
   background: $white;
   border: 2px dashed $green;
   outline: $green solid 2px;
   outline-offset: 8px;
 }
-.square-blue {
+.frame-blue {
   background: $blue;
   border: 2px dashed $white;
   outline: $blue solid 10px;
 }
-.square-white-border-blue {
+.frame-white-border-blue {
   background: $white;
   border: 2px dashed $blue;
   outline-offset: 8px;
   outline: $blue solid 2px;
 }
-.square-50px {
+.frame-50px {
   height: 50px;
   width: 50px;
 }
-.square-160px {
+.frame-160px {
   height: 160px;
   width: 160px;
 }
-.square-220px-responsive {
+.frame-220px-responsive {
   height: 220px;
   width: 220px;
   @media (max-width: 991px){
     height: 180px;
     width: 180px;
   }
-
+}
+.coming-frame {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  opacity: 0;
+  background: rgba(245, 246, 246, 0.8);
+  &:hover {
+    opacity:1;
+  }
 }
