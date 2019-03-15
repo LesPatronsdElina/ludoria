@@ -1,20 +1,22 @@
-<h2>Log in</h2>
+<div class="page-min-height d-flex justify-content-center align-items-center">
+  <div class="frame-log-in d-flex align-items-center justify-content-center" style="background: url( <%= image_url "log-in-bg.jpg" %>);">
+    <div class="frame-300px bg-white text-center py-5 px-4 position-relative">
+      <p class="text-green font-size-24px">Bienvenue</p>
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= f.input_field :email,
+                        placeholder: 'email',
+                        input_html: { autocomplete: "email" }, class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
+            <%= f.input_field :password,
+                        placeholder: 'password',
+                        class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3",
+                        input_html: { autocomplete: "current-password" } %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          <div class="form-actions">
+            <%= f.submit "Se connecter", class: 'px-4 py-2 w-75 text-white bg-green border-radius-20px border-0' %>
+          </div>
+        <% end %>
+        <p><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey position-bottom-right font-weight-light" %></p>
+<!--       <%= link_to "Forgot your password?", new_password_path(resource_name) %> -->
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
