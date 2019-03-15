@@ -25,7 +25,7 @@
 }
 .navbar-element {
   transition: all 0.3s ease;
-  padding: 0px 20px;
+  padding: 0px 4%;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -147,8 +147,9 @@
   position: relative;
   width: 30px;
   height: 2px;
-
-  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $green;
   margin-top: 7px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -157,20 +158,27 @@
 #toggle {
   display: none;
 }
-
+#toggle:checked + .hamburger {
+  right: 5px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+  background: $blue;
+  border-radius: 50%;
+}
 /* Hamburger Animation */
 #toggle:checked + .hamburger .top {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   margin-top: 22.5px;
-  background-color: black;
+  background-color: $white;
 }
 
 #toggle:checked + .hamburger .meat {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-top: -2px;
-  background-color: black;
+  background-color: $white;
 }
 
 #toggle:checked + .hamburger .bottom {
