@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :conditions_validation, inclusion: { in: [true] }
 
-  has_many :user_mesures
+  has_many :user_measures
 end

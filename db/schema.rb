@@ -10,26 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_15_155851) do
+ActiveRecord::Schema.define(version: 2019_03_18_094124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "mesures", force: :cascade do |t|
+  create_table "measures", force: :cascade do |t|
     t.string "name"
     t.string "video"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_mesures", force: :cascade do |t|
-    t.bigint "mesure_id"
+  create_table "user_measures", force: :cascade do |t|
+    t.bigint "measure_id"
     t.bigint "user_id"
     t.string "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["mesure_id"], name: "index_user_mesures_on_mesure_id"
-    t.index ["user_id"], name: "index_user_mesures_on_user_id"
+    t.index ["measure_id"], name: "index_user_measures_on_measure_id"
+    t.index ["user_id"], name: "index_user_measures_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,6 +48,6 @@ ActiveRecord::Schema.define(version: 2019_03_15_155851) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "user_mesures", "mesures"
-  add_foreign_key "user_mesures", "users"
+  add_foreign_key "user_measures", "measures"
+  add_foreign_key "user_measures", "users"
 end
