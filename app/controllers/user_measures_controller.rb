@@ -20,7 +20,7 @@ class UserMeasuresController < ApplicationController
     unless user_measure_validities.include?(false)
       current_user.user_measures.create(user_measures_params)
     else
-      raise
+      # some code is missing
     end
   end
 
