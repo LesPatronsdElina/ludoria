@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center">
+  <div class="position-relative">
+    <%= simple_form_for :user_measures, url: user_measures_path do |f| %>
+      <table class="table-border-right-bottom text-center">
+        <thead>
+          <tr>
+            <th>Code de la mesure</th>
+            <th>Description de la mesure</th>
+            <th>Lien Video</th>
+            <th>Ma mesure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% measures.each do |measure| %>
+            <tr>
+              <td><%= measure.name %></td>
+              <td><%= measure.description %></td>
+              <td><%= link_to 'V', measure.video %></td>
+              <td>
+                <%= f.simple_fields_for "measure_#{measure.id}", UserMeasure.new do |v| %>
+                  <%= v.input :measure_id, input_html: { value: measure.id }, as: :hidden %>
+                  <%= v.input_field :value %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div style= "height: 120px;"></div>
+      <%= f.submit "Je valide mes mesures", class: "bg-green text-white border-radius-20px px-3 py-2 border-0 position-bottom-right" %>
+    <% end %>
+  </div>
+</div>

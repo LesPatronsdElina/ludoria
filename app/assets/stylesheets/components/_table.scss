@@ -1,0 +1,9 @@
+.table-border-right-bottom {
+  th, td {
+    color: $blue;
+    font-weight: 300;
+    border-bottom: 1px solid $blue;
+    border-right: 1px solid $blue;
+    padding: 10px
+  }
+}
