@@ -1,28 +1,31 @@
+<div class="bg-white section-shadow py-5">
+  <div class="container">
+    <h1 class="text-green letter-spacing font-weight-light">- Mes Mesures -</h1>
+    <p>Pour un résultat optimum, il est nécessaire de procéder à une prise de mesures précise.
+    Le succès de votre réalisation est lié à cette prise de mesure.</p>
+    <p>Nous vous accompagnons pas à pas avec notre guide de prise de mesures à télécharger et les vidéos associées mesure par mesure .</p>
+    <p>Reporter ensuite les mesures dans le tableau de mesure ci-dessous</p>
+    <p>Nous vous conseillons de vous faire aider par un tiers pour prendre la toalité des mesures..</p>
+    <div class="row my-5 text-center">
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="frame-50px bg-green circle  mx-auto"><!-- fontawesome --></div>
+        <p>Je visionne les instructions</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
+        <p>Je télécharge mon guide de prise de mesures</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
+        <p>Je prends mes mesures</p>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="frame-50px bg-green circle  mx-auto"><!-- fontawesome --></div>
+        <p>Je reporte mes mesures dans le tableau</p>
+      </div>
+    </div>
 
-<h1>Mes Mesures</h1>
-<p>Pour un résultat optimum, il est nécessaire de procéder à une prise de mesures précise.
-Le succès de votre réalisation est lié à cette prise de mesure.</p>
-<p>Nous vous accompagnons pas à pas avec notre guide de prise de mesures à télécharger et les vidéos associées mesure par mesure .</p>
-<p>Reporter ensuite les mesures dans le tableau de mesure ci-dessous</p>
-<p>Nous vous conseillons de vous faire aider par un tiers pour prendre la toalité des mesures..</p>
-<div class="row my-5 text-center">
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="frame-50px bg-green circle  mx-auto"><!-- fontawesome --></div>
-    <p>Je visionne les instructions</p>
-  </div>
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
-    <p>Je télécharge mon guide de prise de mesures</p>
-  </div>
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
-    <p>Je prends mes mesures</p>
-  </div>
-  <div class="col-12 col-sm-6 col-md-3">
-    <div class="frame-50px bg-green circle  mx-auto"><!-- fontawesome --></div>
-    <p>Je reporte mes mesures dans le tableau</p>
+    <%= link_to 'Je prends mes mesures',new_user_measure_path, remote: true %>
+    <div id="user_measure_form"></div>
   </div>
 </div>
-
-<%= link_to 'Je prends mes mesures',new_user_measure_path, remote: true %>
-<div id="user_measure_form"></div>
