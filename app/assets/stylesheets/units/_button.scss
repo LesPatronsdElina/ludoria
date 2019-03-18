@@ -1,0 +1,21 @@
+.button-patterns {
+  background: rgba(64, 64, 66, 0.1);
+  padding: 5px 30px;
+  border: 1px solid $dark-grey;
+  border-radius: 20px;
+  color: $dark-grey;
+  &:hover {
+    text-decoration: none;
+    color: $dark-grey;
+  }
+}
+.button-large-green {
+ padding: 10px 50px;
+ border-radius: 20px;
+ color: $white;
+ background-color: $green;
+ &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}

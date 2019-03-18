@@ -8,24 +8,30 @@
     <p>Nous vous conseillons de vous faire aider par un tiers pour prendre la toalité des mesures..</p>
     <div class="row my-5 text-center">
       <div class="col-12 col-sm-6 col-md-3">
-        <div class="frame-50px bg-green circle  mx-auto"><!-- fontawesome --></div>
-        <p>Je visionne les instructions</p>
+        <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
+        <p class="mb-0">Je visionne</p>
+        <p class="mb-0">les instructions</p>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
-        <p>Je télécharge mon guide de prise de mesures</p>
+        <p class="mb-0">Je télécharge</p>
+        <p class="mb-0">mon guide de </p>
+        <p class="mb-0">prise de mesures</p>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <div class="frame-50px bg-green circle mx-auto"><!-- fontawesome --></div>
-        <p>Je prends mes mesures</p>
+        <p class="mb-0">Je prends</p>
+        <p class="mb-0">mes mesures</p>
       </div>
       <div class="col-12 col-sm-6 col-md-3">
         <div class="frame-50px bg-green circle  mx-auto"><!-- fontawesome --></div>
-        <p>Je reporte mes mesures dans le tableau</p>
+        <p class="mb-0">Je reporte</p>
+        <p class="mb-0">mes mesures</p>
+        <p class="mb-0">dans le tableau</p>
       </div>
     </div>
+    <div class="text-center"><%= link_to 'Je prends mes mesures',new_user_measure_path, class: "font-size-18px button-large-green", remote: true %></div>
 
-    <%= link_to 'Je prends mes mesures',new_user_measure_path, remote: true %>
-    <div id="user_measure_form"></div>
+    <div id="user_measure_form" class="mt-5"></div>
   </div>
 </div>
