@@ -17,23 +17,29 @@
     height: 75px
   }
 }
-.navbar-height {
-  height: 145px;
-  @media (max-width: 767px) {
-    height: 75px;
-  }
-}
 .navbar-element {
   transition: all 0.3s ease;
-  padding: 0px 4%;
-  margin-bottom: 20px;
+  padding: 0px 2%;
+  margin-bottom: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 600;
   width: 100%;
 }
-
+.navbar-height {
+  height: 145px;
+  @media (max-width: 767px) {
+    height: 75px;
+  }
+}
+a.navbar-title {
+  color: $green;
+ &:hover {
+  text-decoration: none;
+  color: $green;
+ }
+}
 /* Logo */
 .navbar-mihivai-brand img {
   height: 60px;
@@ -216,7 +222,6 @@
 
 nav {
   height: calc(100vh - 40px);
-  min-height: 700px;
   margin: 20px;
   text-align: center;
   display: -webkit-box;

@@ -17,12 +17,29 @@ border-bottom: 2px dashed $green;
 .border-dashed-blue {
   border: 2px dashed $blue;
 }
+.font-weight-light {
+font-weight: 300px;
+}
 .text-blue {
   color: $blue;
+}
+.text-green {
+  color: $green;
 }
 .text-grey {
   color: $grey;
 }
 .max-width-240px {
   max-width: 240px;
+}
+.font-size-38px {
+  font-size: 38px;
+}
+
+.font-size-48px {
+  font-size: 48px;
+}
+.marginy-12px {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
