@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_144929) do
   create_table "user_measures", force: :cascade do |t|
     t.bigint "measure_id"
     t.bigint "user_id"
-    t.integer "value"
+    t.integer "value", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["measure_id"], name: "index_user_measures_on_measure_id"
