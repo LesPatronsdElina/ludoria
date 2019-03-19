@@ -48,6 +48,9 @@
   @media (max-width: 767px) {
     height: 40px;
   }
+  @media (max-width: 575px) {
+    height: auto;
+  }
 }
 .footer-links {
   display: flex;
