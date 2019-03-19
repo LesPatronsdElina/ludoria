@@ -1,6 +1,6 @@
 <div class= "main-navbar text-center">
   <div class="d-none d-md-block">
-    <h1 class="m-3">LUDORIA</h1>
+    <p class="m-3">LUDORIA</p>
     <div class="navbar-element">
 
       <!-- <%= link_to "Les patrons sur-mesure", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>-->
@@ -10,7 +10,7 @@
       <%= link_to "Les Offres", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
 
       <% if user_signed_in? %>
-        <%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete , class: "navbar-mihivai-item navbar-ludoria-link"%>
+        <%= link_to t('Mon compte'), destroy_user_session_path, method: :delete , class: "navbar-mihivai-item navbar-ludoria-link"%>
       <% else %>
         <%= link_to 'Mon compte', new_user_session_path , class: "navbar-mihivai-item navbar-ludoria-link"%>
       <% end %>
