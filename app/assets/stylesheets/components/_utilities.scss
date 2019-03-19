@@ -20,6 +20,18 @@ body {
 .border-dark-grey {
   border: 1px solid $dark-grey;
 }
+.border-bottom-dashed-green {
+border-bottom: 2px dashed $green;
+}
+.border-bottom-green {
+  border: 1px solid $green;
+}
+.border-bottom-dashed-blue {
+  border-bottom: 2px dashed $blue;
+}
+.border-dashed-blue {
+  border: 2px dashed $blue;
+}
 .circle {
   border-radius: 50%;
 }
