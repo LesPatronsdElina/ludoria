@@ -10,6 +10,7 @@
   gem 'redis'
   gem 'jquery-rails'
   #gem 'bootstrap', '~> 4.1.1'
+  gem 'sendgrid-ruby'
   gem 'autoprefixer-rails'
   gem 'font-awesome-sass', '~> 5.0.9'
   gem 'sass-rails'
@@ -21,6 +22,7 @@
   group :development do
     gem 'rails-erd'
     gem 'web-console', '>= 3.3.0'
+    gem 'letter_opener'
   end
 
   group :development, :test do
