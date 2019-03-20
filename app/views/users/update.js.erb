@@ -1,5 +1,8 @@
+<% @user = User.find(@user.id) %>
 function displayMeasures(content) {
   const target = document.getElementById('user_measure_form');
   target.innerHTML = content;
 };
-displayMeasures('<%= j render "user_measures/form", measures: @measures %>');
+
+displayMeasures('<%= j render "form", user: @user %>');
+

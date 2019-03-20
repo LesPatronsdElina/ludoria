@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   get '/legal', to: 'pages#legal', as: 'legal'
   root to: 'pages#home'
   resources :measures, only: [:index]
-  resources :user_measures, only: [:new, :create]
-
+  resources :users, only: [:edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
