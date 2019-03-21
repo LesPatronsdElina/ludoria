@@ -76,14 +76,16 @@
       <div class="border-top-white-transparent footer-form mx-2">
         <div class="px-5">
           <div class="row">
-            <div class="col-12 col-sm-9 mt-2 mb-4">
+            <div id= "contact_form" class="col-12 col-sm-9 mt-2 mb-4">
               <%= simple_form_for @contact, remote: true do |f| %>
-                <div class="d-flex flex-wrap">
-                  <div class="text-left">
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-md-4 text-left">
                     <p class="ml-2 letter-spacing-3px py-2">CONTACT</p>
-                    <%= f.input_field :email, as: :string, class: "mr-3 font-weight-thin placeholder-grey", placeholder: 'Email' %>
+                    <%= f.input :email, as: :string, label: false, input_html: { class: "mr-3 font-weight-thin placeholder-grey"}, placeholder: 'Email' %>
                   </div>
-                  <%= f.input_field :content, as: :string, class: "mt-3 font-weight-thin contact-input placeholder-grey", placeholder: 'Entrez votre message'  %>
+                  <div class="col-12 col-sm-6 col-md-8">
+                    <%= f.input :content, as: :string, label: false, input_html: { class: "font-weight-thin contact-input placeholder-grey"}, placeholder: 'Entrez votre message'  %>
+                  </div>
                 </div>
                 <%= f.button :submit, "Envoyer", class: "d-none" %>
               <% end %>

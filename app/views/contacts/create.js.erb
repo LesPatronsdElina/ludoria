@@ -1,6 +1,9 @@
-const flash = document.querySelector('.alert-warning');
-<% if @valid && UserMailer.contact_ludoria(@contact).deliver_now %>
-  alert("Votre email a bien été envoyé");
+function refreshContact(innerHTML) {
+  const contactForm = document.getElementById('contact_form');
+  contactForm.innerHTML = innerHTML;
+}
+<% if @contact.errors.any?  %>
+  refreshContact('<%= j render "shared/contact_form", contact: @contact %>');
 <% else %>
-  alert("Une erreur est survenu lors de l'envoi d' email");
+  refreshContact('<%= j render "shared/contact_form", contact: Contact.new %>');
 <% end %>
