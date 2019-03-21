@@ -1,5 +1,5 @@
-.page-min-height {
-  min-height: calc(100vh - 170px)
+body {
+  font-family: 'Raleway', 'sans-serif';
 }
 h1 {
   font-size: 36px;
@@ -7,7 +7,12 @@ h1 {
   color: $green;
   font-weight: 300 !important;
 }
-
+.border-top-white-transparent {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.border-top-white-dashed {
+  border-top: 2px dashed $white;
+}
 .border-bottom-dashed-green {
 border-bottom: 2px dashed $green;
 }
@@ -16,6 +21,15 @@ border-bottom: 2px dashed $green;
 }
 .border-dashed-blue {
   border: 2px dashed $blue;
+}
+.font-size-38px {
+  font-size: 38px;
+}
+.font-size-48px {
+  font-size: 48px;
+}
+.font-size-48px {
+  font-size: 48px;
 }
 .font-weight-light {
 font-weight: 300px;
@@ -29,17 +43,30 @@ font-weight: 300px;
 .text-grey {
   color: $grey;
 }
-.max-width-240px {
-  max-width: 240px;
-}
-.font-size-38px {
-  font-size: 38px;
-}
-
-.font-size-48px {
-  font-size: 48px;
+.margin-top-7px {
+  margin-top: 7px;
 }
 .marginy-12px {
   margin-top: 12px;
   margin-bottom: 12px;
+}
+.margin-x-05 {
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.max-width-240px {
+  max-width: 240px;
+}
+.opacity05 {
+  opacity: 0.5;
+}
+.page-min-height {
+  min-height: 100vh;
+}
+.width-33 {
+  width: 33%;
+}
+.wrapper-body {
+  background: white;
+  z-index: 3;
 }
