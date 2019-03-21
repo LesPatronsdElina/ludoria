@@ -1,18 +1,45 @@
 /* Main navbar */
-.navbar-mihivai {
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: white;
+
+
+.main-navbar {
+  // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  position: fixed;
+  width: 100%;
+  background: $white;
+  border-top: 10px solid $green;
+  border-bottom: 2px solid $green;
+  height: 145px;
+  p, a {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 767px) {
+    height: 75px
+  }
+}
+.navbar-element {
   transition: all 0.3s ease;
-  height: 70px;
-  padding: 0px 30px;
+  padding: 0px 2%;
+  margin-bottom: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   z-index: 600;
   width: 100%;
 }
-
+.navbar-height {
+  height: 145px;
+  @media (max-width: 767px) {
+    height: 75px;
+  }
+}
+a.navbar-title {
+  color: $green;
+ &:hover {
+  text-decoration: none;
+  color: $green;
+ }
+}
 /* Logo */
 .navbar-mihivai-brand img {
   height: 60px;
@@ -31,38 +58,46 @@
 }
 
 /* Navbar link */
-.navbar-mihivai-link {
-  color: black;
-  font-size: 14px;
+.navbar-ludoria-link {
+  color: $green;
+  position: relative;
+  font-size: 15px;
   cursor: pointer;
 }
-.navbar-mihivai-link:hover {
-  color: #4aa79f;
-  text-decoration: none;
+.navbar-ludoria-link:hover {
+  color: $green;
+  text-decoration:none;
+}
+.navbar-ludoria-link:hover:before, .navbar-ludoria-link:hover:after  {
+  content: '-';
+  position: absolute;
+}
+.navbar-ludoria-link:hover:after {
+  right: 0px;
+}
+.navbar-ludoria-link:hover:before {
+  left: 0px;
 }
 
 .navbar-link {
   flex: 0 1 auto;
   cursor: pointer;
-  padding: 0 10px;
+  padding: 0px;
   text-decoration: none;
-  color: white;
   font-size: 12px;
   @media (max-width: 768px){
     font-size: 20px;
   }
 }
+
 .navbar-link:hover {
-  color: #da552f;
   text-decoration: none;
 }
 .navbar-link:visited {
   outline: 0;
-  color: white;
   text-decoration: none;
 }
 .navbar-link:focus {
-  color: white;
   outline: 0;
   text-decoration: none;
 }
@@ -118,8 +153,9 @@
   position: relative;
   width: 30px;
   height: 2px;
-
-  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $green;
   margin-top: 7px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -128,20 +164,27 @@
 #toggle {
   display: none;
 }
-
+#toggle:checked + .hamburger {
+  right: 5px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+  background: $blue;
+  border-radius: 50%;
+}
 /* Hamburger Animation */
 #toggle:checked + .hamburger .top {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   margin-top: 22.5px;
-  background-color: white;
+  background-color: $white;
 }
 
 #toggle:checked + .hamburger .meat {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   margin-top: -2px;
-  background-color: white;
+  background-color: $white;
 }
 
 #toggle:checked + .hamburger .bottom {
@@ -151,7 +194,7 @@
 
 #toggle:checked + .hamburger + .nav {
   top: 0;
-  background-color: rgba(74, 167, 159,0.9);
+  background-color: $white;
 }
 
 /* Menu Styling */
@@ -178,7 +221,8 @@
 }
 
 nav {
-  height: 100vh;
+  height: calc(100vh - 40px);
+  margin: 20px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -200,7 +244,6 @@ nav a {
   padding: 10px 0;
   margin-top: 15px;
   color: #eee;
-  font-weight: bold;
   opacity: 0;
   text-decoration: none;
   font-size: 2.3em;
@@ -208,9 +251,15 @@ nav a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
+nav {
+  .text-blue: {
+    color: $blue;
+  }
+  .text-blue:hover {
+    color: $blue;
+  }
+}
 nav a:hover {
-  color: white;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
