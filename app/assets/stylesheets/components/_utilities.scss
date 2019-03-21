@@ -1,3 +1,45 @@
 .page-min-height {
   min-height: calc(100vh - 170px)
 }
+h1 {
+  font-size: 36px;
+  font-family: 'Raleway', sans-serif;
+  color: $green;
+  font-weight: 300 !important;
+}
+
+.border-bottom-dashed-green {
+border-bottom: 2px dashed $green;
+}
+.border-bottom-dashed-blue {
+  border-bottom: 2px dashed $blue;
+}
+.border-dashed-blue {
+  border: 2px dashed $blue;
+}
+.font-weight-light {
+font-weight: 300px;
+}
+.text-blue {
+  color: $blue;
+}
+.text-green {
+  color: $green;
+}
+.text-grey {
+  color: $grey;
+}
+.max-width-240px {
+  max-width: 240px;
+}
+.font-size-38px {
+  font-size: 38px;
+}
+
+.font-size-48px {
+  font-size: 48px;
+}
+.marginy-12px {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
