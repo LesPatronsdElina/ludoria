@@ -3,7 +3,9 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.create(contact_params)
-    redirect_to root_path
+    respond_to do |format|
+        format.js {  flash[:notice] = "hello" }
+    end
   end
   private
   def contact_params

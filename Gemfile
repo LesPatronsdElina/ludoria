@@ -8,6 +8,9 @@
   gem 'puma'
   gem 'rails', '5.2.2'
   gem 'redis'
+  gem 'cloudinary', '~> 1.9.1'
+  gem 'carrierwave', '~> 1.2'
+  gem "pundit"
   gem 'jquery-rails'
   #gem 'bootstrap', '~> 4.1.1'
   gem 'sendgrid-ruby'
