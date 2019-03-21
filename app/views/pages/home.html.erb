@@ -6,9 +6,17 @@
   <h1>Pages#Home</h1>
   <p>Find me in app/views/pages/home.html.erb</p>
 </div>
-
+<div class="container">
 <%= simple_form_for @contact do |f| %>
-  <%= f.input :email, as: :string %>
-  <%= f.input :content, as: :string  %>
+  <div class="d-flex flex-wrap">
+    <div class="">
+      <p class="ml-2">CONTACT</p>
+      <%= f.input_field :email, as: :string, class: "mr-3", placeholder: 'Email' %>
+    </div>
+    <div class="">
+      <%= f.input_field :content, as: :text, style: "width: 75vh;min-width: 250px", class: "mt-3", placeholder: 'Entrez votre message'  %>
+    </div>
+  </div>
   <%= f.button :submit, "Envoyer" %>
 <% end %>
+</div>
