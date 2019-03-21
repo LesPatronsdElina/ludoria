@@ -75,22 +75,35 @@
     <div class="container-footer-form">
       <div class="border-top-white-transparent footer-form mx-2">
         <div class="container">
-          <%= simple_form_for @contact, remote: true do |f| %>
-            <div class="d-flex flex-wrap my-4">
-              <div class="text-left">
-                <p class="ml-2 letter-spacing-3px py-2">CONTACT</p>
-                <%= f.input_field :email, as: :string, class: "mr-3", placeholder: 'Email' %>
-              </div>
-              <%= f.input_field :content, as: :string, class: "mt-2 w-50", placeholder: 'Entrez votre message'  %>
+          <div class="row">
+            <div class="col-12 col-sm-9 my-4">
+              <%= simple_form_for @contact, remote: true do |f| %>
+                <div class="d-flex flex-wrap">
+                  <div class="text-left">
+                    <p class="ml-2 letter-spacing-3px py-2">CONTACT</p>
+                    <%= f.input_field :email, as: :string, class: "mr-3 font-weight-thin placeholder-grey", placeholder: 'Email' %>
+                  </div>
+                  <%= f.input_field :content, as: :string, class: "mt-2 font-weight-thin contact-input placeholder-grey", placeholder: 'Entrez votre message'  %>
+                </div>
+                <%= f.button :submit, "Envoyer", class: "d-none" %>
+              <% end %>
             </div>
-            <%= f.button :submit, "Envoyer", class: "d-none" %>
-          <% end %>
+
+            <div class="col-12 col-sm-3 footer-icons">
+              <div class="d-flex justify-content-end align-items-center h-100">
+                <%= link_to "/", class: "text-white" do %>
+                  <i class="fab fa-facebook-f font-size-24px mr-3"></i>
+                <% end %>
+                <%= link_to "/", class: "text-white" do %>
+                  <i class="fab fa-instagram  font-size-24px mr-3"></i>
+                <% end %>
+                <%= link_to "/", class: "text-white" do %>
+                  <i class="fab fa-youtube-square  font-size-24px"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
         </div>
-       <!--  <div>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-youtube-square"></i>
-        </div> -->
       </div>
     </div>
   </div>

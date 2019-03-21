@@ -1,6 +1,6 @@
 const flash = document.querySelector('.alert-warning');
 <% if @valid && UserMailer.contact_ludoria(@contact).deliver_now %>
-alert("Votre email a bien été envoyé");
+  alert("Votre email a bien été envoyé");
 <% else %>
   alert("Une erreur est survenu lors de l'envoi d' email");
 <% end %>
