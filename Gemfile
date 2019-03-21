@@ -18,6 +18,9 @@
   gem 'webpacker'
   gem 'slim'
 
+  gem 'wicked_pdf'
+  gem 'wkhtmltopdf-binary'
+
   group :development do
     gem 'rails-erd'
     gem 'web-console', '>= 3.3.0'
