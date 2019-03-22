@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_measures_params)
+    UserMailer.send_user_measures(@user).deliver_now
   end
 
   private

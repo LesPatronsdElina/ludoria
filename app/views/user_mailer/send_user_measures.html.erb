@@ -1,0 +1,7 @@
+<p>Bonjours, <%= @user.first_name %></p>
+<p>Voici vos mesures : </p>
+<ul>
+<% @user.user_measures.each do |user_measure| %>
+  <li><%= user_measure.measure.name %> : <%= user_measure.value %></li>
+<% end %>
+</ul>
