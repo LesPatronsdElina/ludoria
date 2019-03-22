@@ -6,9 +6,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :user_measures
   accepts_nested_attributes_for :user_measures
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :conditions_validation, inclusion: { in: [true] }
+
   def create_user_measures
     Measure.all.each do |measure|
       user_measures.create(measure: measure)
     end
   end
+
 end

@@ -1,0 +1,28 @@
+.carousel-control-prev, .carousel-control-next {
+  opacity: 1 !important;
+}
+.height-carousel-home {
+  min-height: 300px;
+  @media (max-width: 1199px) {
+    min-height: 440px;
+  }
+  @media (max-width: 575px) {
+    min-height: 800px;
+  }
+}
+.margin-top-steps-home {
+  margin-top: 90px;
+  @media (max-width: 991px) {
+    margin-top: 10px;
+  }
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+.carousel-quote {
+  color: $green;
+  height: 200px;
+  margin-top: -20px;
+  font-size: 280px;
+  font-family: 'Radley', serif;
+}

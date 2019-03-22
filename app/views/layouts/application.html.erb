@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><%= yield(:title) || Yourdomain %></title>
+    <title>Ludoria votre modéliste à domicile</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -15,20 +15,21 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="wrapper-body">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
-
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
         "@type": "Organization",
-        "name": "yourdomain",
-        "url": "https://www.yourdomain.com/",
+        "name": "ludoria",
+        "url": "https://www.ludoria.com/",
         "logo": "",
         "contactPoint": [{
           "@type": "ContactPoint",
-          "url": "https://www.yourdomain.com",
-          "email": "contact@yourdomain.com",
+          "url": "https://www.ludoria.com",
+          "email": "lespatronsdelina@gmail.com",
           "telephone": "+33-30000000",
           "contactType": "customer service"
         }],
