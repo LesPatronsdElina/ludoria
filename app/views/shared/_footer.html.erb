@@ -6,10 +6,10 @@
     </div>
     <div class="container">
       <div class="d-none d-sm-block">
-        <div class="d-flex justify-content-between container-footer-columns">
-          <div class= "width-33 d-flex justify-content-start">
+        <div class="d-flex justify-content-around container-footer-columns">
+          <div class= "d-flex justify-content-start">
             <div class="text-left">
-              <p class="mb-3 footer-column-title">LA MAISON LUDORIA</p>
+              <p class="mb-3 footer-column-title font-weight-normal letter-spacing">LA MAISON LUDORIA</p>
               <ul>
                 <li><a href="#"class="text-white">Les collections</a></li>
                 <li><a href="#"class="text-white">Vos mesures</a></li>
@@ -19,21 +19,21 @@
               </ul>
             </div>
           </div>
-          <div class= "width-33 d-flex justify-content-center margin-x-05">
+          <div class= "d-flex justify-content-center margin-x-05">
             <div class="text-left">
-              <p class="mb-3 footer-column-title">SERVICES</p>
+              <p class="mb-3 footer-column-title font-weight-normal letter-spacing">SERVICES</p>
               <ul>
                 <li><a href="#"class="text-white">Mon compte</a></li>
                 <li><a href="#"class="text-white">FAQ</a></li>
               </ul>
             </div>
           </div>
-          <div class= "width-33 d-flex justify-content-end">
+          <div class= "d-flex justify-content-end">
             <div class="text-left">
-              <p class="mb-3 footer-column-title">LEGAL</p>
+              <p class="mb-3 footer-column-title font-weight-normal letter-spacing">LEGAL</p>
               <ul>
                 <li><a href="#"class="text-white">Mentions légales</a></li>
-                <li><a href="#"class="text-white">Données personneles</a></li>
+                <li><a href="#"class="text-white">Données personnelles</a></li>
                 <li><a href="#"class="text-white">CGU</a></li>
                 <li><a href="#"class="text-white">CGV</a></li>
               </ul>
@@ -73,12 +73,39 @@
       </div>
     </div>
     <div class="container-footer-form">
-      <div class="border-top-white-transparent footer-form">
-       <!--  <div>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-youtube-square"></i>
-        </div> -->
+      <div class="border-top-white-transparent footer-form mx-2">
+        <div class="px-5">
+          <div class="row">
+            <div id= "contact_form" class="col-12 col-sm-9 mt-2 mb-4">
+              <%= simple_form_for @contact, remote: true do |f| %>
+                <div class="row">
+                  <div class="col-12 col-sm-6 col-md-4 text-left">
+                    <p class="ml-2 letter-spacing-3px py-2">CONTACT</p>
+                    <%= f.input :email, as: :string, label: false, input_html: { class: "mr-3 font-weight-thin placeholder-grey"}, placeholder: 'Email' %>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-8">
+                    <%= f.input :content, as: :string, label: false, input_html: { class: "font-weight-thin contact-input placeholder-grey"}, placeholder: 'Entrez votre message'  %>
+                  </div>
+                </div>
+                <%= f.button :submit, "Envoyer", class: "d-none" %>
+              <% end %>
+            </div>
+
+            <div class="col-12 col-sm-3 footer-icons">
+              <div class="d-flex justify-content-end align-items-center h-100">
+                <%= link_to "/", class: "text-white" do %>
+                  <i class="fab fa-facebook-f font-size-24px mr-3"></i>
+                <% end %>
+                <%= link_to "/", class: "text-white" do %>
+                  <i class="fab fa-instagram  font-size-24px mr-3"></i>
+                <% end %>
+                <%= link_to "/", class: "text-white" do %>
+                  <i class="fab fa-youtube-square  font-size-24px"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
