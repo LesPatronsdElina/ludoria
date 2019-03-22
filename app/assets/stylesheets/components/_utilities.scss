@@ -112,7 +112,39 @@ font-weight: 300px;
   opacity: 0.5;
 }
 .page-min-height {
-  min-height: calc(100vh - 170px)
+  min-height: calc(100vh - 140px)
+}
+.position-bottom-center {
+  position: absolute;
+  bottom: 0px;
+  transform: translate(50%);
+  right: 50%;
+}
+.text-blue {
+  color: $blue;
+}
+.text-green {
+  color: $green;
+}
+.text-dark-grey {
+  color: $dark-grey
+}
+.text-grey {
+  color: $grey;
+}
+.width-33 {
+  width: 33%;
+}
+.section-shadow {
+  box-shadow: 0px -2px 4px rgba(229, 229, 229, 0.5);
+}
+.wrapper-body {
+  background: $white;
+  z-index: 3;
+}
+
+input.placeholder-grey::placeholder {
+  color: $grey;
 }
 .position-bottom-center {
   position: absolute;
