@@ -1,11 +1,5 @@
 body {
-  font-family: 'Raleway', 'sans-serif';
-}
-h1 {
-  font-size: 36px;
   font-family: 'Raleway', sans-serif;
-  color: $green;
-  font-weight: 300 !important;
 }
 .bg-green {
   background-color: $green;
@@ -145,4 +139,32 @@ font-weight: 300px;
 
 input.placeholder-grey::placeholder {
   color: $grey;
+}
+.position-bottom-center {
+  position: absolute;
+  bottom: 0px;
+  transform: translate(50%);
+  right: 50%;
+}
+.text-blue {
+  color: $blue;
+}
+.text-green {
+  color: $green;
+}
+.text-dark-grey {
+  color: $dark-grey
+}
+.text-grey {
+  color: $grey;
+}
+.width-33 {
+  width: 33%;
+}
+.section-shadow {
+  box-shadow: 0px -2px 4px rgba(229, 229, 229, 0.5);
+}
+.wrapper-body {
+  background: $white;
+  z-index: 3;
 }
