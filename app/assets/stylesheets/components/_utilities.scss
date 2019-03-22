@@ -25,7 +25,9 @@ border-bottom: 2px dashed $green;
 .circle {
   border-radius: 50%;
 }
-
+.font-size-12px {
+  font-size: 12px;
+}
 .font-size-16px {
   font-size: 16px;
 }
@@ -107,6 +109,14 @@ font-weight: 300px;
 }
 .page-min-height {
   min-height: calc(100vh - 140px)
+}
+.padding-50px-15px {
+  padding-left: 50px;
+  padding-right: 50px;
+  @media (max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .position-bottom-center {
   position: absolute;
