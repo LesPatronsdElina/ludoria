@@ -3,8 +3,15 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
+
+    if @contact.save
+      respond_to do |format|
+        format.html
+        format.js { flash.now[:notice] = 'Votre message a bien été envoyé' }
+      end
+    end
   end
+
   private
   def contact_params
      params.require(:contact).permit(:email, :content)

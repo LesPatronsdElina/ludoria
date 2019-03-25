@@ -9,30 +9,31 @@
           <thead>
             <tr>
               <th class="w-15">Code de la mesure</th>
-              <th class="w-15">Description de la mesure</th>
+              <th class="w-15 hide-under-md">Description de la mesure</th>
               <th class="w-15">Lien Video</th>
               <th class="w-15">Ma mesure</th>
             </tr>
           </thead>
           <tbody>
-             <%= f.fields_for :user_measures do |v| %>
-               <tr>
-                 <td><%= v.object.measure.name %></td>
-                 <td class="w-50"><%= v.object.measure.description%></td>
-                 <td>
-                   <%= link_to v.object.measure.video, target: "_blank" do %>
-                       <i class="far fa-2x fa-play-circle text-green"></i>
-                   <% end %>
+            <%= f.fields_for :user_measures do |v| %>
+              <tr>
+                <td><%= v.object.measure.name %></td>
+                <td class="w-50 hide-under-md"><%= v.object.measure.description%></td>
+                <td>
+                  <%= link_to v.object.measure.video, target: "_blank" do %>
+                    <i class="far fa-2x fa-play-circle text-green"></i>
+                  <% end %>
                  </td>
                  <td>
-                   <%= v.input :value, as: :integer, label: false, error: false, input_html: {class: "w-100"} %>
+                   <%= v.input :value, as: :integer, label: false, error: false, input_html: {class: "w-100 min-width-100px"} %>
                  </td>
                </tr>
              <% end %>
           </tbody>
         </table>
         <div style= "height: 120px;"></div>
-        <%= f.submit "Je valide mes mesures", class: "font-size-14px button-large-green border-0 position-bottom-right" %>
+        <%= f.submit "Je valide mes mesures", class: "d-none d-sm-block font-size-14px button-large-green border-0 position-bottom-right" %>
+        <%= f.submit "Je valide mes mesures", class: "d-block d-sm-none font-size-14px button-large-green border-0 position-bottom-center" %>
       <% end %>
     </div>
   </div>

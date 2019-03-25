@@ -10,6 +10,10 @@ class UsersController < ApplicationController
 
   def update
     @user.update(user_measures_params)
+    respond_to do |format|
+      format.html
+      format.js { flash.now[:notice] = 'Un email vous a été envoyé' }
+    end
     UserMailer.send_user_measures(@user).deliver_now
   end
 
