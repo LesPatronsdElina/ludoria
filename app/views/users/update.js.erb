@@ -2,7 +2,11 @@ function displayMeasures(content) {
   const target = document.getElementById('user_measure_form');
   target.innerHTML = content;
 };
-let flash = document.getElementById('flash');
-flash.innerHTML = '<%= j render partial: "shared/flashes" %>';
+function displayFlash(content) {
+  const flash = document.getElementById('flash');
+  flash.innerHTML = content;
+};
+
+displayFlash('<%= j render partial: "shared/flashes" %>');
 displayMeasures('<%= j render "form", user: @user %>');
 

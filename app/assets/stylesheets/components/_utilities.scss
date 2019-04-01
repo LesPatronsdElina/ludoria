@@ -99,6 +99,24 @@ font-weight: 300px;
     display:none;
   }
 }
+.hyphen-for-title {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+.hyphen-for-title:before , .hyphen-for-title:after  {
+  content: '-';
+  position: absolute;
+  @media (max-width: 575px) {
+    display:none;
+  }
+}
+.hyphen-for-title:before {
+  left: -20px;
+}
+.hyphen-for-title:after {
+  right: -20px;
+}
 .letter-spacing {
   letter-spacing: .08rem;
 }
