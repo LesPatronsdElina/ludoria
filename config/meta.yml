@@ -1,6 +1,6 @@
 meta_product_name: "Ludoria"
-meta_title: "Patron de couture sur mesure - Ludoria"
-meta_description: "Obtenez des patrons sur mesure pour tous nos modèles de couture"
+meta_title: "Patrons de couture sur mesure - Ludoria"
+meta_description: "DescriptionLudoria élabore pour vous une gamme de patrons de couture SUR MESURE. Notre volonté est d'habiller toutes les morphologies. Nos patrons sont dessinés d'après vos mensurations. Nous proposons des patrons de vêtements mais aussi des aides à la couture avec nos corsages et jupe de base."
 meta_image: "http://localhost:3000/assets/logo-infobulle-794dec97068ae8a37b2e471d67681f93241cd0af19261f231448301a03a67c1f.png" # should exist in `app/assets/images/`
 meta-email: lespatronsdelina@gmail.com
 meta_logo: "logo-infobulle.png" # should exist in `app/assets/images/`

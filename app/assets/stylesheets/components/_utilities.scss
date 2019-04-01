@@ -71,6 +71,24 @@ font-weight: 300px;
 .font-style-normal {
   font-style: normal;
 }
+.hyphen-for-title {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+.hyphen-for-title:before , .hyphen-for-title:after  {
+  content: '-';
+  position: absolute;
+  @media (max-width: 575px) {
+    display:none;
+  }
+}
+.hyphen-for-title:before {
+  left: -30px;
+}
+.hyphen-for-title:after {
+  right: -30px;
+}
 .letter-spacing {
   letter-spacing: .08rem;
 }
