@@ -1,0 +1,23 @@
+meta_product_name: "Ludoria"
+meta_title: "Patron de couture sur mesure - Ludoria"
+meta_description: "Obtenez des patrons sur mesure pour tous nos modèles de couture"
+meta_image: "http://localhost:3000/assets/logo-infobulle-794dec97068ae8a37b2e471d67681f93241cd0af19261f231448301a03a67c1f.png" # should exist in `app/assets/images/`
+meta-email: lespatronsdelina@gmail.com
+meta_logo: "logo-infobulle.png" # should exist in `app/assets/images/`
+meta-url: "https://www.ludoria/"
+
+# twitter_account: ""   # required for Twitter Cards
+# meta_keywords: ""
+# meta-url-fb:  https://www.facebook.com/ludoria/
+# meta-url-instagram: https://www.instagram.com/ludoria/
+# meta-url-linkedin: https://www.linkedin.com/company/luoria
+# meta-twitter: "@luoriaApp"
+# meta-fb-app-id: ''
+# meta-site: ludoria
+# meta-company:
+# meta-company-status:
+# meta-company-registration:
+# meta-company-address:
+# meta-publisher:
+# meta-phone: ""
+
