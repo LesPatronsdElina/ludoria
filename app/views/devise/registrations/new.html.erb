@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-12 col-sm-8">
           <div class="pl-3 font-size-12px">
-            <%= f.input :conditions_validation, as: :boolean, label: " Je confirme avoir pris connaissance  <a href='/' class='text-green'>des conditions générales de vente et d’utilisation</a> ".html_safe, error: false %>
+            <%= f.input :conditions_validation, as: :boolean, label: " Je confirme avoir pris connaissance #{link_to 'des conditions générales de vente et d’utilisation', '/', class: 'text-green'}".html_safe, error: false %>
           </div>
         </div>
          <div class="col-12 col-sm-4 text-center">

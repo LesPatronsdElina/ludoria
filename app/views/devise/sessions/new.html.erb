@@ -3,21 +3,22 @@
     <div class="frame-300px bg-white text-center pt-4 pb-5 px-4 position-relative">
       <p class="text-green font-size-24px">Bienvenue</p>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <%= f.input_field :email,
+            <%= f.input :email,
                         placeholder: 'email',
-                        input_html: { autocomplete: "email" }, class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
-            <%= f.input_field :password,
+                        label: false,
+                        input_html: { autocomplete: "email", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3"} %>
+            <%= f.input :password,
                         placeholder: 'password',
-                        class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3",
-                        input_html: { autocomplete: "current-password" } %>
+                        label: false,
+                        input_html: { autocomplete: "current-password", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3" } %>
 
           <div class="form-actions">
             <%= f.submit "Se connecter", class: 'px-4 py-2 w-75 text-white bg-green border-radius-20px border-0' %>
           </div>
         <% end %>
         <div class="position-bottom-right text-right">
-          <p class="mb-0"><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey font-weight-light" %></p>
-          <p  class="mb-0"><%= link_to "mot de passe oublié ?", new_password_path(resource_name), class: "text-dark-grey font-weight-light" %></p>
+          <p class="mb-0"><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey font-size-14px font-weight-light" %></p>
+          <p  class="mb-0"><%= link_to "mot de passe oublié ?", new_password_path(resource_name), class: "text-dark-grey font-size-14px font-weight-light" %></p>
         </div>
     </div>
   </div>
