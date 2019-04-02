@@ -12,8 +12,9 @@
     </div>
     <div style="background-color:#85C4BF; max-width:600px;padding:15px;margin:0 auto; border-radius: 5px">
       <div style="background-color:#FFF;color:#3D7296;margin: 0px; padding:30px;font-family:'Roboto', sans-serif; border-radius: 5px">
-        <%= yield %>
+        <%= yield(:mail_content) %>
       </div>
     </div>
   </body>
 </html>
+
