@@ -41,10 +41,23 @@
         </div>
       </div>
       <div class="d-none d-sm-block">
-        <div class="text-center"><%= link_to 'Je prends mes mesures',edit_user_path(current_user), class: "font-size-18px button-large-green", remote: true %></div>
+
+        <div class="text-center">
+          <% if user_signed_in? %>
+            <%= link_to 'Je prends mes mesures',edit_user_path(current_user), class: "font-size-18px button-large-green", remote: true %>
+          <% else %>
+            <%= link_to 'Je prends mes mesures',new_user_registration_path, class: "font-size-18px button-large-green" %>
+          <% end %>
+          </div>
       </div>
       <div class="d-block d-sm-none">
-        <div class="text-center"><%= link_to 'Mes mesures',edit_user_path(current_user), class: "font-size-18px button-large-green", remote: true %></div>
+        <div class="text-center">
+          <% if user_signed_in? %>
+            <%= link_to 'Mes mesures', edit_user_path(current_user), class: "font-size-18px button-large-green", remote: true %>
+          <% else %>
+            <%= link_to 'Mes mesures',new_user_registration_path, class: "font-size-18px button-large-green" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

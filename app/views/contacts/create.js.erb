@@ -2,10 +2,13 @@ function refreshContact(innerHTML) {
   const contactForm = document.getElementById('contact_form');
   contactForm.innerHTML = innerHTML;
 }
+function sendFlash(innerHTML) {
+  const flash = document.getElementById('flash');
+  flash.innerHTML = innerHTML;
+}
 <% if @contact.errors.any?  %>
   refreshContact('<%= j render "shared/contact_form", contact: @contact %>');
 <% else %>
   refreshContact('<%= j render "shared/contact_form", contact: Contact.new %>');
-  let flash = document.getElementById('flash');
-  flash.innerHTML = '<%= j render partial: "shared/flashes" %>';
+  sendFlash('<%= j render partial: "shared/flashes" %>');
 <% end %>
