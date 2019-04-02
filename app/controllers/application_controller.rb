@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   # include Pundit
 
   protect_from_forgery with: :exception
-  before_action :initialize_contact
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -21,9 +20,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: user_data)
     devise_parameter_sanitizer.permit(:account_update, keys: user_data)
   end
-  def initialize_contact
-    @contact = Contact.new
-  end
+
   # private
   # def skip_pundit?
   #   devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)|(^contacts$)|(^blog_articles$)/
