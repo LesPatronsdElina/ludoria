@@ -7,22 +7,22 @@
           <%= f.input :reset_password_token, as: :hidden %>
           <%= f.full_error :reset_password_token %>
 
-          <%= f.input_field :password,
+          <%= f.input :password,
+                label: false,
                 placeholder: 'mot de passe',
-                class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3",
                 autofocus: true,
-                hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-          <%= f.input_field :password_confirmation,
+                input_html: { autocomplete: "new-password", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 mt-3" } %>
+          <%= f.input :password_confirmation,
+                label: false,
                 placeholder: 'confirmation du mot de passe',
-                class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
+                input_html: { class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3" } %>
           <div class="form-actions">
             <%= f.submit "Valider", class: 'px-4 py-2 w-75 text-white bg-green border-radius-20px border-0' %>
           </div>
         <% end %>
         <div class="position-bottom-right text-right">
-          <p class="mb-0"><%= link_to "se connecter ?", new_session_path(resource_name), class: "text-dark-grey font-weight-light" %></p>
-          <p  class="mb-0"><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey font-weight-light" %></p>
+          <p class="mb-0"><%= link_to "se connecter ?", new_session_path(resource_name), class: "text-dark-grey font-size-14px font-weight-light" %></p>
+          <p  class="mb-0"><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey font-size-14px font-weight-light" %></p>
         </div>
     </div>
   </div>

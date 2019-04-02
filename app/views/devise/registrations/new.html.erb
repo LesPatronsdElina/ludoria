@@ -4,28 +4,28 @@
 <!--       <%= f.error_notification %> -->
 
 
-        <%= f.input_field :email,
+        <%= f.input :email,
+                    label: false,
                     autofocus: true,
                     placeholder: 'email',
-                    input_html: { autocomplete: "email" },
-                    class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
-        <%= f.input_field :password,
+                    input_html: { autocomplete: "email", class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" } %>
+        <%= f.input :password,
+                    label: false,
                     placeholder: 'Mot de passe',
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" },
-                     class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3"%>
-        <%= f.input_field :password_confirmation,
+                    input_html: { autocomplete: "new-password", class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" } %>
+        <%= f.input :password_confirmation,
+                    label: false,
                     placeholder: 'confirmation mot de passe',
-                    input_html: { autocomplete: "new-password" },
-                    class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
-        <%= f.input_field :last_name,
+                    input_html: { autocomplete: "new-password", class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" } %>
+        <%= f.input :last_name,
+                    label: false,
                     placeholder: 'Nom',
-                    input_html: { autocomplete: "new-password" },
-                    class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
-        <%= f.input_field :first_name,
+                    input_html: { autocomplete: "new-password", class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" } %>
+        <%= f.input :first_name,
+                    label: false,
                     placeholder: 'Prénom',
-                    input_html: { autocomplete: "new-password" },
-                    class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" %>
+                    input_html: { autocomplete: "new-password", class: "form-control border-radius-20px-important text-dark-grey py-1 px-3 my-3" } %>
 
       <div class="row">
         <div class="col-12 col-sm-8">
