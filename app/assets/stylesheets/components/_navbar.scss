@@ -71,6 +71,7 @@ a.navbar-title {
 }
 .navbar-ludoria-link:hover:before, .navbar-ludoria-link:hover:after  {
   content: '-';
+  position: absolute;
 }
 .navbar-ludoria-link:hover:after {
   right: 0px;
