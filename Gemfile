@@ -21,6 +21,7 @@
   gem 'uglifier'
   gem 'webpacker'
   gem 'slim'
+  gem 'mail_interceptor', group: [:production]
 
   group :development do
     gem 'rails-erd'
