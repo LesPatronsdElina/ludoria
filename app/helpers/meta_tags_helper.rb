@@ -14,7 +14,7 @@ module MetaTagsHelper
   end
 
   def meta_keywords
-    content_for?(:meta_keywords) ? content_for(:meta_keywords) : DEFAULT_META["meta_description"]
+    content_for?(:meta_keywords) ? content_for(:meta_keywords) : DEFAULT_META["meta_keywords"]
   end
 
 end
