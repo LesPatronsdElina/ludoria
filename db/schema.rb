@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_132617) do
+ActiveRecord::Schema.define(version: 2019_04_03_115823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_article_tags", force: :cascade do |t|
+    t.bigint "blog_article_id"
+    t.bigint "blog_tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_article_id"], name: "index_blog_article_tags_on_blog_article_id"
+    t.index ["blog_tag_id"], name: "index_blog_article_tags_on_blog_tag_id"
+  end
+
+  create_table "blog_articles", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.string "cover_picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "blog_photos", force: :cascade do |t|
+    t.string "photo"
+    t.bigint "blog_article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_article_id"], name: "index_blog_photos_on_blog_article_id"
+  end
+
+  create_table "blog_tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "email"
@@ -33,7 +64,7 @@ ActiveRecord::Schema.define(version: 2019_03_21_132617) do
   create_table "user_measures", force: :cascade do |t|
     t.bigint "measure_id"
     t.bigint "user_id"
-    t.integer "value", default: 0
+    t.float "value", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["measure_id"], name: "index_user_measures_on_measure_id"
@@ -55,6 +86,9 @@ ActiveRecord::Schema.define(version: 2019_03_21_132617) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blog_article_tags", "blog_articles"
+  add_foreign_key "blog_article_tags", "blog_tags"
+  add_foreign_key "blog_photos", "blog_articles"
   add_foreign_key "user_measures", "measures"
   add_foreign_key "user_measures", "users"
 end
