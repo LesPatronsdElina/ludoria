@@ -32,7 +32,7 @@
             <div class="text-left">
               <p class="mb-3 footer-column-title font-weight-normal letter-spacing">LEGAL</p>
               <ul>
-                <li><a href="#"class="text-white">Mentions légales</a></li>
+                <li><%= link_to "Mentions légales", legal_path, class: "text-white" %></li>
                 <li><a href="#"class="text-white">Données personnelles</a></li>
                 <li><a href="#"class="text-white">CGU</a></li>
                 <li><a href="#"class="text-white">CGV</a></li>
@@ -46,7 +46,7 @@
           <p class="mb-3 footer-column-title">LA MAISON LUDORIA</p>
           <ul>
             <li><a href="#"class="text-white">Les collections</a></li>
-            <li><a href="#"class="text-white">Vos mesures</a></li>
+            <li><%= link_to "Vos mesures", measures_path,class: "text-white" %></li>
             <li><a href="#"class="text-white">le blog</a></li>
             <li><a href="#"class="text-white">Notre identité</a></li>
             <li><a href="#"class="text-white">Les tarifs</a></li>
@@ -62,7 +62,7 @@
         <div class="text-left mb-4">
           <p class="mb-3 footer-column-title">LEGAL</p>
           <ul>
-            <li><a href="#"class="text-white">Mentions légales</a></li>
+            <li><%= link_to "Mentions légales", legal_path, class: "text-white" %></li>
             <li><a href="#"class="text-white">Données personneles</a></li>
             <li><a href="#"class="text-white">CGU</a></li>
             <li><a href="#"class="text-white">CGV</a></li>
@@ -72,25 +72,9 @@
     </div>
     <div class="container-footer-form">
       <div class="border-top-white-transparent footer-form mx-2">
-        <div class="px-5">
-          <div class="row">
-            <div id= "contact_form" class="col-12 col-sm-9 mt-2 mb-4">
-              <%= render 'shared/contact_form', contact: Contact.new %>
-            </div>
-
-            <div class="col-12 col-sm-3 footer-icons">
-              <div class="d-flex justify-content-end align-items-center h-100">
-                <%= link_to "/", class: "text-white" do %>
-                  <i class="fab fa-facebook-f font-size-24px mr-3"></i>
-                <% end %>
-                <%= link_to "/", class: "text-white" do %>
-                  <i class="fab fa-instagram  font-size-24px mr-3"></i>
-                <% end %>
-                <%= link_to "/", class: "text-white" do %>
-                  <i class="fab fa-youtube-square  font-size-24px"></i>
-                <% end %>
-              </div>
-            </div>
+        <div class="padding-50px-15px">
+          <div id= "contact_form">
+            <%= render 'shared/contact_form', contact: Contact.new %>
           </div>
         </div>
       </div>
