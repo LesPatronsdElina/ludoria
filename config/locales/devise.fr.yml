@@ -16,13 +16,13 @@ fr:
       unconfirmed: "Vous devez valider votre compte pour continuer."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation de votre mail pour Ludoria"
+        subject: "Ludoria vous souhaite la bienvenue !"
       reset_password_instructions:
-        subject: "Changer votre mot de passe de votre compte Ludoria"
+        subject: "Ludoria : réinitialisation de votre mot de passe"
       unlock_instructions:
         subject: "Déverrouiller votre compte Ludoria"
       password_change:
-        subject: "Votre mot de passe Ludoria a été modifié avec succés."
+        subject: "Ludoria : votre mot de passe a été modifié avec succés."
     omniauth_callbacks:
       failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
       success: "Authentifié avec succès via %{kind}."

@@ -40,6 +40,10 @@
     width: 180px;
   }
 }
+.frame-250px {
+  width: 250px;
+  height: 250px;
+}
 .frame-opacity-on-hover {
   position: absolute;
   top: 0px;
@@ -51,4 +55,12 @@
   &:hover {
     opacity:1;
   }
+}
+.frame-300px{
+  height: 300px;
+  width: 300px;
+}
+.frame-log-in {
+  height: 380px;
+  width: 380px;
 }

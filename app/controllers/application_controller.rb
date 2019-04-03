@@ -26,4 +26,5 @@ class ApplicationController < ActionController::Base
   #   devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)|(^contacts$)|(^blog_articles$)/
   # end
 
+
 end
