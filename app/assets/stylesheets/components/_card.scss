@@ -31,3 +31,18 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
+.card-body-small {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 10px 5px;
+}
+
+.card-columns-small{
+  -webkit-column-count: 3;
+  column-count: 2;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  orphans: 1;
+  widows: 1;
+}
