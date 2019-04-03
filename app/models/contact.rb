@@ -8,4 +8,3 @@ class Contact < ApplicationRecord
     UserMailer.contact_ludoria(self).deliver_now
   end
 end
-
