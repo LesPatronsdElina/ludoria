@@ -1,18 +1,22 @@
-<h2>Forgot your password?</h2>
+<div class="page-min-height d-flex justify-content-center align-items-center">
+  <div class="frame-log-in d-flex align-items-center justify-content-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),url( <%= image_url "fond-sign-in.png" %>);background-size: cover">
+    <div class="frame-300px bg-white text-center pb-5 pt-4 px-4 position-relative">
+      <p class="text-green font-size-24px">Réinitialisatier mon mot de passe</p>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+          <%= f.input :email,
+                        label: false,
+                        placeholder: 'email',
+                        input_html: { autocomplete: "email", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 mt-3" } %>
+          <div class="form-actions">
+            <%= f.submit "Envoyer", class: 'px-4 py-2 w-75  mt-2 text-white bg-green border-radius-20px border-0' %>
+          </div>
+        <% end %>
+        <div class="position-bottom-right text-right">
+          <p class="mb-0"><%= link_to "se connecter ?", new_session_path(resource_name), class: "text-dark-grey font-size-14px font-weight-light" %></p>
+          <p  class="mb-0"><%= link_to "nouvelle cliente ?", new_registration_path(resource_name), class: "text-dark-grey font-size-14px font-weight-light" %></p>
+        </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
