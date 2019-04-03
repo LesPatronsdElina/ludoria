@@ -77,18 +77,7 @@
         <div class="px-5">
           <div class="row">
             <div id= "contact_form" class="col-12 col-sm-9 mt-2 mb-4">
-              <%= simple_form_for @contact, remote: true do |f| %>
-                <div class="row">
-                  <div class="col-12 col-sm-6 col-md-4 text-left">
-                    <p class="ml-2 letter-spacing-3px py-2">CONTACT</p>
-                    <%= f.input :email, as: :string, label: false, input_html: { class: "mr-3 font-weight-thin placeholder-grey"}, placeholder: 'Email' %>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-8">
-                    <%= f.input :content, as: :string, label: false, input_html: { class: "font-weight-thin contact-input placeholder-grey"}, placeholder: 'Entrez votre message'  %>
-                  </div>
-                </div>
-                <%= f.button :submit, "Envoyer", class: "d-none" %>
-              <% end %>
+              <%= render 'shared/contact_form', contact: Contact.new %>
             </div>
 
             <div class="col-12 col-sm-3 footer-icons">
