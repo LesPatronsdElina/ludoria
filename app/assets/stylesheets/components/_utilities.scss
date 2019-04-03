@@ -95,6 +95,24 @@ font-weight: 300px;
 .font-style-normal {
   font-style: normal;
 }
+.hyphen-for-title {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+}
+.hyphen-for-title:before , .hyphen-for-title:after  {
+  content: '-';
+  position: absolute;
+  @media (max-width: 575px) {
+    display:none;
+  }
+}
+.hyphen-for-title:before {
+  left: -30px;
+}
+.hyphen-for-title:after {
+  right: -30px;
+}
 .letter-spacing {
   letter-spacing: .08rem;
 }
@@ -136,6 +154,14 @@ font-weight: 300px;
 }
 .page-min-height {
   min-height: calc(100vh - 140px)
+}
+.padding-50px-15px {
+  padding-left: 50px;
+  padding-right: 50px;
+  @media (max-width: 575px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .position-bottom-center {
   position: absolute;
