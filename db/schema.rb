@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_115823) do
+ActiveRecord::Schema.define(version: 2019_04_03_125323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 2019_04_03_115823) do
     t.string "cover_picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "blog_meta", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
+    t.bigint "blog_article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_article_id"], name: "index_blog_meta_on_blog_article_id"
   end
 
   create_table "blog_photos", force: :cascade do |t|
@@ -88,6 +97,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_115823) do
 
   add_foreign_key "blog_article_tags", "blog_articles"
   add_foreign_key "blog_article_tags", "blog_tags"
+  add_foreign_key "blog_meta", "blog_articles"
   add_foreign_key "blog_photos", "blog_articles"
   add_foreign_key "user_measures", "measures"
   add_foreign_key "user_measures", "users"

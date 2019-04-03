@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/legal', to: 'pages#legal', as: 'legal'
   root to: 'pages#home'
   resources :contacts, only: [:create]
+  resources :blog_articles, as: :blog, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
