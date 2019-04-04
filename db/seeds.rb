@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 puts 'delete data'
 BlogPhoto.destroy_all
 BlogArticle.destroy_all
@@ -43,3 +36,4 @@ photo_article2_urls.each do |photo_url|
   blog_photo2.remote_photo_url = photo_url
   blog_photo2.save
 end
+AdminUser.create!(email: 'admin@ludoria.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

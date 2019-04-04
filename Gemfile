@@ -21,6 +21,7 @@
   gem 'uglifier'
   gem 'webpacker'
   gem 'slim'
+  gem 'activeadmin'
 
   group :development do
     gem 'rails-erd'
