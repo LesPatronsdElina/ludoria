@@ -22,8 +22,8 @@
   gem 'webpacker'
   gem 'slim'
 
-  gem 'wicked_pdf'
-  gem 'wkhtmltopdf-binary'
+  # gem 'wicked_pdf'
+  # gem 'wkhtmltopdf-binary'
 
   group :development do
     gem 'rails-erd'
