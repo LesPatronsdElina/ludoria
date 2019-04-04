@@ -1,7 +1,58 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "delete date"
+UserMeasure.destroy_all
+Measure.destroy_all
+
+puts "create Measure"
+#DEVANT HAUT DU CORPS
+Measure.create(name: "A", description: "Tour de cou", video: "https://www.youtube.com/watch?v=LMAGq_7v1Ak")
+Measure.create(name: "B", description: "Tour d'encolure", video: "https://www.youtube.com/watch?v=Lx2pzP47MD0")
+Measure.create(name: "B1", description: "Largeur d'encolure devant", video: "https://www.youtube.com/watch?v=YikOBXgZNuI")
+Measure.create(name: "B2", description: "Profondeur d'encolure devant", video: "https://www.youtube.com/watch?v=PRstBlcATpc")
+Measure.create(name: "C1", description: "Carrure Devant", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "C2", description: "Base du cou / ligne de Carrure", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "C3", description: "Carrure Dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "D1", description: "Tour de poitrine complet", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "D2", description: "Ecart saillants", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "D3", description: "Saillant /côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "D4", description: "Milieu saillant / Milieu Poitrine", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "D5", description: "Base du cou / saillant", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "D6", description: "Saillant / pente d'epaule", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "E", description: "Pente d'épaule", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "F1", description: "Tour complet sous-poitrine", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "F2", description: "Mesure sous-poitrine Devant", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "G1", description: "Point d'encolure (ENC3) / Saillant", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "G2", description: "Saillant / Sous-poitrine", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "G3", description: "sous poitrine / taille", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "G4", description: "saillant / taille", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "H", description: "Longueur côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+#DOS HAUT DU CORPS
+Measure.create(name: "B3", description: "Largeur d'encolure dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "B4", description: "Profondeur d'encolure dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "J1", description: "Base du cou (ENC4) / Milieu Taille dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "J2", description: "Point d'encolure (ENC3) / Milieu taille dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "J3", description: "Point d'emmanchure EM1 / Milieu taille dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "J4", description: "Base du cou (ENC4) / Milieu Carrure dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "J5", description: "Point d'encolure (ENC3) / Milieu Carrure dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "J6", description: "Point d'emmanchure EM1 / Milieu Carrure dos", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+#DEVANT BAS DU CORPS
+Measure.create(name: "K1", description: "Tour de taille complet", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "K2", description: "Tour de petites hanches complet", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "K3", description: "Tour de hanches complet", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "K4", description: "Tour de sous-fesses complet", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "L1", description: "Milieu devant taille /Milieu devant petites hanches", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "L2", description: "Milieu devant petites hanches / ML devant Hanches", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "L3", description: "ML devant hanches / ML devant sous fesses", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "M1", description: "Ligne de coté taille / hanche", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "M2", description: "Ligne de coté taille / sous fesses", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "N1", description: "ML devant hanches / Taille ext côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "N2", description: "ML devant hanches / Petites hanches ext côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "N3", description: "ML devant hanches / Sous fesse extérieur côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "N4", description: "ML devant petites hanches / petites hanches extérieur côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+#DOS BAS DU CORPS
+Measure.create(name: "O1", description: "Milieu devant taille /Milieu dos petites hanches", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "O2", description: "Milieu dos petites hanches / ML dos Hanches", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "O3", description: "ML dos hanches / ML dos sous fesses", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "P", description: "ML dos hanches / hanches extérieur côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "Q1", description: "ML dos hanches / Taille ext côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "Q2", description: "ML dos hanches / Petites hanches ext côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")
+Measure.create(name: "Q3", description: "ML dos hanches / Sous fesse extérieur côté", video: "https://www.youtube.com/watch?v=DdgNFwY3W84")

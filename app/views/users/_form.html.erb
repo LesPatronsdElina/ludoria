@@ -1,0 +1,40 @@
+<div class="border-bottom-green mb-1"></div>
+<div class="border-bottom-dashed-green mb-5"></div>
+<div class="container">
+  <h2 class="text-green letter-spacing font-weight-light mb-5 hyphen-for-title">Tableau de Mesures</h2>
+  <div class="d-flex justify-content-center">
+    <div class="position-relative w-75 mx-auto">
+      <%= simple_form_for user, url: user_path(user), remote: true do |f| %>
+        <table class="table-border-right-bottom text-center">
+          <thead>
+            <tr>
+              <th class="w-15">Code de la mesure</th>
+              <th class="w-15 hide-under-md">Description de la mesure</th>
+              <th class="w-15">Lien Video</th>
+              <th class="w-15">Ma mesure<br>(en cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= f.fields_for :user_measures do |v| %>
+              <tr>
+                <td><%= v.object.measure.name %></td>
+                <td class="w-50 hide-under-md"><%= v.object.measure.description%></td>
+                <td>
+                  <%= link_to v.object.measure.video, target: "_blank" do %>
+                    <i class="far fa-2x fa-play-circle text-green"></i>
+                  <% end %>
+                 </td>
+                 <td>
+                   <%= v.input :value, as: :integer, label: false, error: false, input_html: {class: "w-100 min-width-100px"} %>
+                 </td>
+               </tr>
+             <% end %>
+          </tbody>
+        </table>
+        <div style= "height: 120px;"></div>
+        <%= f.submit "Je valide mes mesures", class: "d-none d-sm-block font-size-14px button-large-green border-0 position-bottom-right" %>
+        <%= f.submit "Je valide mes mesures", class: "d-block d-sm-none font-size-14px button-large-green border-0 position-bottom-center" %>
+      <% end %>
+    </div>
+  </div>
+</div>

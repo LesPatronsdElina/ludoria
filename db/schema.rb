@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_132617) do
+ActiveRecord::Schema.define(version: 2019_04_01_131142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_03_21_132617) do
   create_table "user_measures", force: :cascade do |t|
     t.bigint "measure_id"
     t.bigint "user_id"
-    t.integer "value", default: 0
+    t.float "value", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["measure_id"], name: "index_user_measures_on_measure_id"

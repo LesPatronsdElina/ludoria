@@ -9,6 +9,16 @@
     color: $dark-grey;
   }
 }
+.button-large-green {
+ padding: 10px 50px;
+ border-radius: 20px;
+ color: $white;
+ background-color: $green;
+ &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}
 .button-white {
   padding:  10px 20px;
   background: $white;
