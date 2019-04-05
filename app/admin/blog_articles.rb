@@ -1,6 +1,6 @@
 ActiveAdmin.register BlogArticle do
   config.sort_order = 'id_asc'
-  permit_params :title, :content, :cover_picture, :remote_cover_picture_url, :pdf, blog_tag_ids: [],
+  permit_params :title, :content, :cover_picture, :remote_cover_picture_url, :pdf, :status, blog_tag_ids: [],
       blog_meta_attributes: [:_destroy, :id, :title, :content, :blog_article_id],
       blog_photos_attributes: [:destroy, :id, :photo, :remote_photo_url, :blog_article_id, :alt]
 
@@ -8,6 +8,7 @@ ActiveAdmin.register BlogArticle do
     selectable_column
     column :id
     column "Titre", :title
+    column :status
     column "Voir" do |blog_article|
       link_to "PDF", blog_article.pdf.url
     end
@@ -34,6 +35,7 @@ ActiveAdmin.register BlogArticle do
           f.input :cover_picture_cache, as: :hidden
           f.input :pdf, as: :file
           f.input :blog_tags, as: :check_boxes, collection: BlogTag.all
+          f.input :status
           f.button :submit
         end
       end

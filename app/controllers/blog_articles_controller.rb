@@ -1,7 +1,7 @@
 class BlogArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   def index
-    @articles = BlogArticle.all
+    @articles = BlogArticle.active
   end
 
   def show
