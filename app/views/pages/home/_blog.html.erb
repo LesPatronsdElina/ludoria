@@ -3,7 +3,7 @@
     <h2 class="text-green font-size-40px letter-spacing font-weight-light">- Le Blog -</h2>
 
     <div class="row my-5">
-      <% BlogArticle.first(3).each do |blog_article|%>
+      <% @articles.each do |blog_article|%>
         <div class="col-12 col-md-4">
           <div class="card mx-auto w-100 my-3">
             <%= link_to "", blog_path(blog_article), class: "link_invisible" %>
