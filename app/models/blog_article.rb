@@ -7,5 +7,6 @@ class BlogArticle < ApplicationRecord
   accepts_nested_attributes_for :blog_meta, allow_destroy: true
   accepts_nested_attributes_for :blog_photos, allow_destroy: true
 
+  mount_uploader :pdf, PhotoUploader
   mount_uploader :cover_picture, PhotoUploader
 end

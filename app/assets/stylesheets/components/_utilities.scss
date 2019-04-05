@@ -37,6 +37,9 @@ border-bottom: 2px dashed $green;
 .border-dashed-blue {
   border: 2px dashed $blue;
 }
+.border-dashed-green {
+  border: 2px dashed $green;
+}
 .circle {
   border-radius: 50%;
 }
@@ -94,6 +97,13 @@ border-bottom: 2px dashed $green;
 .font-weight-light {
 font-weight: 300px;
 }
+.link-green {
+  color: $green;
+   &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
+}
 .hide-under-md {
   @media (max-width: 767px) {
     display:none;
@@ -127,6 +137,9 @@ font-weight: 300px;
 .letter-spacing {
   letter-spacing: .08rem;
 }
+.letter-spacing-1px {
+  letter-spacing: 1px;
+}
 .letter-spacing-4px{
   letter-spacing: 4px;
 }
@@ -147,6 +160,12 @@ font-weight: 300px;
 }
 .min-width-100px {
   min-width: 100px;
+}
+.max-width-100-66px {
+  max-width: calc(100% - 66px)
+}
+.max-width-100-300px {
+  max-width: calc(100% - 300px)
 }
 .max-width-105px {
   max-width: 105px;
