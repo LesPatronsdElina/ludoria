@@ -2,7 +2,7 @@ ActiveAdmin.register BlogArticle do
   config.sort_order = 'id_asc'
   permit_params :title, :content, :cover_picture, :remote_cover_picture_url, :pdf, blog_tag_ids: [],
       blog_meta_attributes: [:_destroy, :id, :title, :content, :blog_article_id],
-      blog_photos_attributes: [:destroy, :id, :photo, :remote_photo_url, :blog_article_id]
+      blog_photos_attributes: [:destroy, :id, :photo, :remote_photo_url, :blog_article_id, :alt]
 
   index do
     selectable_column
@@ -52,6 +52,7 @@ ActiveAdmin.register BlogArticle do
             photo.input :photo, as: :file, hint: cl_image_tag(photo.object.photo.url),  label: "Importer une photo"
             photo.input :remote_photo_url, label: "Photo URL"
             photo.input :photo_cache, as: :hidden
+            photo.input :alt
           end
         f.button :submit
         end

@@ -6,14 +6,14 @@
     <div class="row my-5">
       <div class="col-md-6 col-lg-5 col-xl-4 mb-3">
         <% if @article.blog_photos.size == 0 %>
-          <%= cl_image_tag @article.cover_picture, class: "card-img" %>
+          <%= default_photo(@article.cover_picture, 'card-img', @article.title) %>
         <% elsif @article.blog_photos.size == 1%>
-          <%= cl_image_tag @article.blog_photos.first.photo, class: "card-img" %>
+          <%= default_photo(@article.blog_photos.first.photo, 'card-img', @article.blog_photos.first.alt) %>
         <% else %>
           <div class="card-columns-small">
             <% @article.blog_photos.each do |article_photo| %>
               <div class="card-body-small">
-                <%= cl_image_tag article_photo.photo, class: "card-img" %>
+                <%= default_photo(article_photo.photo, 'card-img', article_photo.alt) %>
               </div>
             <% end %>
           </div>
