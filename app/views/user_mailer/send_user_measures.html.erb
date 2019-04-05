@@ -1,0 +1,23 @@
+<p>Bonjour, <%= @user.first_name.capitalize %></p>
+<p>Nous sommes heureux de vous faire parvenir votre tableau de mesures personnalisées.</p>
+<p>Nous vous rappelons que vous pouvez à tout moment accéder à vos mesures ou les modifier dans votre espace. </p>
+<table style="border-collapse: collapse; margin: 5px auto;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #3D7296; padding:10px 40px">Nom</th>
+      <th style="border: 1px solid #3D7296; padding:10px 40px">Mesure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.user_measures.each do |user_measure| %>
+      <tr>
+        <td style="padding:10px 40px; border: 1px solid #3D7296"><%= user_measure.measure.name %></td>
+        <td style="padding:10px 40px; border: 1px solid #3D7296"><%= user_measure.value %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p>En vous souhaitant de belles réalisations et de beaux projets couture !</p>
+
+<p>Cordialement,</p>
+<p style= "color: #85C4BF;font-size: 26px; font-weight: 300">Ludoria</p>

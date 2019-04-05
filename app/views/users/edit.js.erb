@@ -1,0 +1,5 @@
+function displayMeasures(content) {
+  const target = document.getElementById('user_measure_form');
+  target.innerHTML = content;
+};
+displayMeasures('<%= j render "form", user: current_user %>');

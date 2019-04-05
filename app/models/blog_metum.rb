@@ -1,3 +1,3 @@
 class BlogMetum < ApplicationRecord
-  belongs_to :blog_article
+  belongs_to :blog_article, optional: true
 end

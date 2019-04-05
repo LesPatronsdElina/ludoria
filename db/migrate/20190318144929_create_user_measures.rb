@@ -5,6 +5,7 @@ class CreateUserMeasures < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
       t.integer :value, default: 0
 
+
       t.timestamps
     end
   end
