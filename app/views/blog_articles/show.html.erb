@@ -51,12 +51,14 @@
           </a>
         </div>
         <% if @article.pdf.file %>
-        <div class="row border-dashed-green p-2 m-2">
-          <div class="col-md-7 col-lg-8 col-xl-9 d-flex justify-content-start align-items-center my-1">
-            <div class="frame-50px circle bg-green d-flex justify-content-center align-items-center mr-3"><i class="fa fa-file-pdf text-white"></i></div>
-            <p class= "mb-0 text-dark-grey max-width-100-66px">Je télécharge gratuitement la totalité des informations du blog dédié à la prise de mesures</p>
-          </div>
-          <div class="col-12 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center my-1"><%= link_to 'Je télécharge', @article.pdf.url, class: "button-large-green text-center letter-spacing-1px" %></div>
+          <div class="row border-dashed-green p-2 m-2">
+            <div class="col-md-7 col-lg-8 col-xl-9 d-flex justify-content-start align-items-center my-1">
+              <div class="frame-50px circle bg-green d-flex justify-content-center align-items-center mr-3"><i class="fa fa-file-pdf text-white"></i></div>
+              <p class= "mb-0 text-dark-grey max-width-100-66px">Je télécharge gratuitement la totalité des informations du blog dédié à la prise de mesures</p>
+            </div>
+            <div class="col-12 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center my-1">
+              <%= link_to 'Je télécharge', @article.pdf.url, class: "button-large-green text-center letter-spacing-1px" %>
+            </div>
           </div>
         <% end %>
       </div>
