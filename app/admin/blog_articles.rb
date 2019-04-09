@@ -1,6 +1,6 @@
 ActiveAdmin.register BlogArticle do
   config.sort_order = 'id_asc'
-  permit_params :title, :content, :cover_picture, :remote_cover_picture_url, :pdf, :status, blog_tag_ids: [],
+  permit_params :title, :content, :cover_picture, :remote_cover_picture_url, :pdf, :status, :visible_on_home, blog_tag_ids: [],
       blog_meta_attributes: [:_destroy, :id, :title, :content, :blog_article_id],
       blog_photos_attributes: [:destroy, :id, :photo, :remote_photo_url, :blog_article_id, :alt]
 
@@ -12,6 +12,7 @@ ActiveAdmin.register BlogArticle do
     column "Voir" do |blog_article|
       link_to "PDF", blog_article.pdf.url
     end
+    column 'Homepage',:visible_on_home
     actions
   end
 
@@ -29,13 +30,14 @@ ActiveAdmin.register BlogArticle do
       tab 'Article' do
         f.inputs do
           f.input :title
-          f.input :content
+          f.input :content, as: :ckeditor
           f.input :cover_picture, as: :file, hint: cl_image_tag(f.object.cover_picture.url), label: "Importer une photo"
           f.input :remote_cover_picture_url, label: "Photo URL"
           f.input :cover_picture_cache, as: :hidden
           f.input :pdf, as: :file
           f.input :blog_tags, as: :check_boxes, collection: BlogTag.all
           f.input :status
+          f.input :visible_on_home, label: "Visible sur la homepage"
           f.button :submit
         end
       end

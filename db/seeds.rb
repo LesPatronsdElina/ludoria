@@ -93,4 +93,4 @@ photo_article2_urls.each do |photo_url|
   blog_photo2.remote_photo_url = photo_url
   blog_photo2.save
 end
-AdminUser.create!(email: 'admin@ludoria.com', password: 'azerty', password_confirmation: 'azerty') if Rails.env.development?
+User.create!(email: 'admin@ludoria.com', password: 'azerty', password_confirmation: 'azerty', first_name: 'admin', last_name: 'ludoria', conditions_validation: true, admin: true) if Rails.env.development?

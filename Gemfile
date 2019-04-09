@@ -22,6 +22,9 @@
   gem 'webpacker'
   gem 'slim'
   gem 'activeadmin'
+  gem 'activeadmin_addons'
+  gem 'ckeditor'
+  gem 'formadmin'
 
   # gem 'wicked_pdf'
   # gem 'wkhtmltopdf-binary'
