@@ -32,7 +32,7 @@ ActiveAdmin.register BlogArticle do
       row :pdf
     end
   end
-  form(html: { multipart: true }) do |f|
+  form do |f|
     tabs do
       tab 'Article' do
         f.inputs do
@@ -42,7 +42,6 @@ ActiveAdmin.register BlogArticle do
           f.input :remote_cover_picture_url, label: "Photo URL"
           f.input :cover_picture_cache, as: :hidden
           f.input :pdf, as: :file
-          f.file_field :photos, multiple: true
           f.input :blog_tags, as: :check_boxes, collection: BlogTag.all
           f.input :status
           f.input :visible_on_home, label: "Visible sur la homepage"

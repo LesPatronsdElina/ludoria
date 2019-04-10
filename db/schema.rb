@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_09_150542) do
+ActiveRecord::Schema.define(version: 2019_04_10_173253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 2019_04_09_150542) do
     t.string "pdf"
     t.integer "status", default: 0
     t.boolean "visible_on_home", default: false
-    t.json "photos"
   end
 
   create_table "blog_meta", force: :cascade do |t|
