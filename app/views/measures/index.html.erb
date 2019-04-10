@@ -5,12 +5,12 @@
 <div class="bg-white section-shadow py-5">
   <div class="container">
     <h1 class="text-green letter-spacing font-weight-light mb-5 hyphen-for-title">Mes Mesures</h1>
-    <div class="container-fluid px-4">
+    <div class="container-fluid px-4 text-dark-grey">
       <p>Pour un résultat optimum, il est nécessaire de procéder à une prise de mesures précise.<br>Le succès de votre réalisation est lié à cette prise de mesure.</p>
       <p>Nous vous accompagnons pas à pas avec notre guide de prise de mesures à télécharger et les vidéos<br>associées mesure par mesure.<br>Reporter ensuite les mesures dans le tableau de mesure ci-dessous</p>
       <p>Nous vous conseillons de vous faire aider par un tiers pour prendre la totalité des mesures..</p>
 
-      <div class="row my-5 text-center">
+      <div class="row my-5 text-center text-dark-grey">
         <div class="col-12 col-sm-6 col-md-3">
           <div class="frame-60px bg-green circle mx-auto d-flex align-items-center justify-content-center"><i class="far fa-2x fa-play-circle text-white"></i></div>
           <p class="mb-0">Je visionne</p>
@@ -37,7 +37,7 @@
       <div class="px-4 my-5 d-flex flex-wrap justify-content-around align-items-center">
         <div class="w-50 video-frame-min-width m-3">
           <div class="video-frame">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/S1mCMYdo9Sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <%= image_tag 'ludoria-col.png', style: 'width:560px;height:315px' %>
           </div>
         </div>
         <% if user_signed_in? %>

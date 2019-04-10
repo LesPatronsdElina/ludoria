@@ -15,7 +15,7 @@
             </tr>
           </thead>
           <tbody>
-            <%= f.fields_for :user_measures do |v| %>
+            <%= f.fields_for :user_measures, current_user.user_measures.ordered_by_position do |v| %>
               <tr>
                 <td><%= v.object.measure.name %></td>
                 <td class="w-50 hide-under-md"><%= v.object.measure.description%></td>
