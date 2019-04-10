@@ -4,7 +4,6 @@
     <%= default_photo(blog_article.cover_picture, 'card-img-top', blog_article.title) %>
   <% end %>
   <div class="card-body">
-    <h3 class="card-title font-size-24px text-dark-grey"><%= blog_article.title %></h3>
-    <p class="card-text font-size-14px text-grey"><%= blog_article.content.truncate(200, separator: ' ').html_safe  %></p>
+    <h3 class="card-title font-size-12px-lg-16px text-dark-grey"><%= blog_article.title %></h3>
   </div>
 </div>

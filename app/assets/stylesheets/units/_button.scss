@@ -25,3 +25,7 @@
   border-radius: 20px;
   color: $green;
 }
+.form-control:focus {
+  border-color: rgba(85, 158, 150, 0.6) !important;
+  box-shadow: 0 0 0 0.1rem rgba(85, 158, 150, 0.5) !important;
+}

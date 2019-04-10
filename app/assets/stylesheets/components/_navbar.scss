@@ -7,12 +7,12 @@
   z-index: 100;
   width: 100%;
   background: $white;
-  border-top: 10px solid $green;
+  border-top: 5px solid $green;
   border-bottom: 2px solid $green;
-  height: 145px;
+  height: 100px;
   p, a {
     font-family: 'Raleway', sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
   @media (max-width: 767px) {
     height: 75px
@@ -21,7 +21,6 @@
 .navbar-element {
   transition: all 0.3s ease;
   padding: 0px 2%;
-  margin-bottom: 3px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +28,7 @@
   width: 100%;
 }
 .navbar-height {
-  height: 145px;
+  height: 100px;
   @media (max-width: 767px) {
     height: 75px;
   }
@@ -68,6 +67,7 @@ a.navbar-title {
 .navbar-ludoria-link:hover {
   color: $green;
   text-decoration:none;
+  font-style: italic;
 }
 .navbar-ludoria-link:hover:before, .navbar-ludoria-link:hover:after  {
   content: '-';

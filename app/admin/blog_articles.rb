@@ -2,7 +2,12 @@ ActiveAdmin.register BlogArticle do
   config.sort_order = 'id_asc'
   permit_params :title, :content, :cover_picture, :remote_cover_picture_url, :pdf, :status, :visible_on_home, blog_tag_ids: [],
       blog_meta_attributes: [:_destroy, :id, :title, :content, :blog_article_id],
-      blog_photos_attributes: [:destroy, :id, :photo, :remote_photo_url, :blog_article_id, :alt]
+      blog_photos_attributes: [:destroy, :id, :photo, :remote_photo_url, :blog_article_id, :alt], photos: []
+      # controller do
+      #   def update
+      #     raise
+      #   end
+      # end
 
   index do
     selectable_column
@@ -20,12 +25,14 @@ ActiveAdmin.register BlogArticle do
     attributes_table do
       row :id
       row :title
-      row :content
+      row :content do |blog_article|
+        blog_article.content.html_safe
+      end
       row :cover_picture
       row :pdf
     end
   end
-  form do |f|
+  form(html: { multipart: true }) do |f|
     tabs do
       tab 'Article' do
         f.inputs do
@@ -35,6 +42,7 @@ ActiveAdmin.register BlogArticle do
           f.input :remote_cover_picture_url, label: "Photo URL"
           f.input :cover_picture_cache, as: :hidden
           f.input :pdf, as: :file
+          f.file_field :photos, multiple: true
           f.input :blog_tags, as: :check_boxes, collection: BlogTag.all
           f.input :status
           f.input :visible_on_home, label: "Visible sur la homepage"

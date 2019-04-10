@@ -2,13 +2,15 @@
   <div class="row mb-3">
     <div class="col-12 col-sm-5 col-md-3 text-left">
       <p class="ml-2 letter-spacing-3px py-2">CONTACT</p>
-      <%= f.input :email, as: :string, label: false, error: false, input_html: { class: "mr-3 font-weight-thin placeholder-grey"}, placeholder: 'Email' %>
+      <%= f.input :email, as: :string, label: false, error: false, input_html: { class: "mr-3 font-weight-thin placeholder-grey font-size-14px-important"}, placeholder: 'Email' %>
     </div>
     <div class="col-12 col-sm-7 col-md-5">
-      <%= f.input :content, label: false, error: false, input_html: { class: "font-weight-thin contact-input placeholder-grey"}, placeholder: 'Entrez votre message'  %>
+      <%= f.input :content, label: false, error: false, input_html: { class: "font-weight-thin contact-input placeholder-grey font-size-14px-important"}, placeholder: 'Entrez votre message'  %>
     </div>
     <div class="col-6 col-md-2 d-flex align-items-center">
-      <%= f.submit "Envoyer", class: "button-white border-0" %>
+      <%= button_tag type: 'submit', class: "bg-transparent border-0" do %>
+        <i class="fas fa-envelope font-size-24px text-white"></i>
+    <% end %>
     </div>
     <div class="col-6 col-md-2 footer-icons">
       <div class="d-flex justify-content-end align-items-center h-100">

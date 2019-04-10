@@ -5,6 +5,20 @@
     </div>
     <div class="row my-5">
       <div class="col-md-6 col-lg-5 col-xl-4 mb-3">
+      <!--   <% if @article.photos.size == 0 %>
+          <%= default_photo(@article.cover_picture, 'card-img', @article.title) %>
+        <% elsif @article.photos.size == 1%>
+          <%= default_photo(@article.photos.first, 'card-img', 'ludoria') %>
+        <% else %>
+          <div class="card-columns-small">
+            <% @article.photos.each do |article_photo| %>
+              <div class="card-body-small">
+                <p><%= article_photo %></p>
+                <%= default_photo(article_photo, 'card-img', 'ludoria') %>
+              </div>
+            <% end %>
+          </div>
+        <% end %> -->
         <% if @article.blog_photos.size == 0 %>
           <%= default_photo(@article.cover_picture, 'card-img', @article.title) %>
         <% elsif @article.blog_photos.size == 1%>
@@ -20,7 +34,7 @@
         <% end %>
       </div>
       <div class="col-md-6 col-lg-7 col-xl-8 py-2">
-        <p class= "text-justify"><%= @article.content %></p>
+        <div class= "text-justify"><%= @article.content.html_safe %></div>
       </div>
     </div>
     <div class="d-none d-md-block">
