@@ -3,6 +3,7 @@ BlogPhoto.destroy_all
 BlogArticle.destroy_all
 UserMeasure.destroy_all
 Measure.destroy_all
+User.destroy_all
 
 puts "create Measure"
 #DEVANT HAUT DU CORPS
