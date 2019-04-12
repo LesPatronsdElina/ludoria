@@ -4,8 +4,7 @@
 
     <div class="card-group cards-with-border my-4">
       <% @articles.each do |blog_article|%>
-
-          <div class="card mx-2 w-100 my-3">
+          <div class="card card-margin w-100 my-3">
             <%= link_to "", blog_path(blog_article), class: "link_invisible" %>
             <%= default_photo(blog_article.cover_picture, 'card-img-top', blog_article.title) %>
             <div class="card-body">
