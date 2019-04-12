@@ -3,6 +3,11 @@
   border: 2px dashed $white;
   outline: $green solid 10px;
 }
+.frame-green:before {
+  border: 2px dashed $white;
+  top: 10px;
+  bottom: 10px;
+}
 .frame-white-border-green {
   background: $white;
   border: 2px dashed $green;

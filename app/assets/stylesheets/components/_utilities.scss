@@ -1,6 +1,3 @@
-body {
-  font-family: 'Raleway', sans-serif;
-}
 input.placeholder-grey::placeholder, textarea.placeholder-grey::placeholder {
   color: $grey;
   font-size: 14px;
@@ -43,6 +40,12 @@ border-bottom: 2px dashed $green;
 }
 .circle {
   border-radius: 50%;
+}
+.font-title {
+  font-size: 40px;
+  @media (max-width:767px) {
+    font-size: 28px;
+  }
 }
 .font-size-12px {
   font-size: 12px;
@@ -100,6 +103,9 @@ border-bottom: 2px dashed $green;
 }
 .font-style-normal {
   font-style: normal;
+}
+.font-weight-regular {
+  font-weight: 400;
 }
 .font-weight-light {
 font-weight: 300px;
@@ -183,11 +189,6 @@ font-weight: 300px;
 .max-width-1140px {
   max-width: 1140px;
 }
-.lg-min-height-38px {
-  @media (min-width: 992px) {
-    min-height: 38px;
-  }
-}
 
 .min-height-250px {
   min-height: 250px;
@@ -246,6 +247,12 @@ font-weight: 300px;
 .w-55 {
   width: 55%;
 }
+.width-75-md-100 {
+  width: 75%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
 .width-33 {
   width: 33%;
 }
@@ -259,7 +266,6 @@ font-weight: 300px;
   background: $white;
   z-index: 3;
 }
-
 input.placeholder-grey::placeholder {
   color: $grey;
 }

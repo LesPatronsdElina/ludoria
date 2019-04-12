@@ -3,7 +3,7 @@
 }
 .height-carousel-home {
   min-height: 210px;
-  @media (max-width: 1199px) {
+  @media (max-width: 991px) {
     min-height: 440px;
   }
   @media (max-width: 575px) {
@@ -12,11 +12,8 @@
 }
 .carousel-cards-width {
   width: 100%;
-  @media (max-width: 1199px) {
-    width: 74%;
-  }
   @media (max-width: 991px) {
-    width: 100%
+    width: 70%;
   }
 }
 .margin-top-steps-home {
@@ -37,5 +34,10 @@
   @media (max-width: 991px) {
     font-size: 150px;
     margin-top: -5px;
+  }
+   @media (max-width: 767px) {
+    font-size: 80px;
+    margin-top: -30px;
+    height: 100px;
   }
 }

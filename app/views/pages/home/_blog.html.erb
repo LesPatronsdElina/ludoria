@@ -1,18 +1,17 @@
 <div class="bg-white section-shadow py-4">
   <div class="container">
-    <h2 class="text-green font-size-40px letter-spacing font-weight-light">- Le Blog -</h2>
+    <h2 class="text-green font-title letter-spacing font-weight-light">- Le Blog - couture & modélisme</h2>
 
-    <div class="row my-4">
+    <div class="card-group cards-with-border my-4">
       <% @articles.each do |blog_article|%>
-        <div class="col-12 col-md-4">
-          <div class="card mx-auto w-100 my-3">
+
+          <div class="card mx-2 w-100 my-3">
             <%= link_to "", blog_path(blog_article), class: "link_invisible" %>
             <%= default_photo(blog_article.cover_picture, 'card-img-top', blog_article.title) %>
             <div class="card-body">
-              <h3 class="font-size-12px-lg-16px text-grey lg-min-height-38px"><%= blog_article.title %></h3>
+              <h3 class="font-size-12px-lg-16px text-grey font-weight-regular"><%= blog_article.title %></h3>
             </div>
           </div>
-        </div>
       <% end %>
     </div>
   </div>
