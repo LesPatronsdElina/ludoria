@@ -2,9 +2,9 @@
   <div class="container">
     <h2 class="text-green font-title letter-spacing font-weight-light">- Le Blog - couture & modélisme</h2>
 
-    <div class="card-deck cards-with-border my-4">
+    <div class="card-deck my-4">
       <% @articles.each do |blog_article|%>
-          <div class="card card-margin w-100 my-3">
+          <div class="card w-100 my-3">
             <%= link_to "", blog_path(blog_article), class: "link_invisible" %>
             <%= default_photo(blog_article.cover_picture, 'card-img-top', blog_article.title) %>
             <div class="card-body py-3">
