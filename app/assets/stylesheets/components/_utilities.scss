@@ -1,8 +1,6 @@
-body {
-  font-family: 'Raleway', sans-serif;
-}
-input.placeholder-grey::placeholder {
+input.placeholder-grey::placeholder, textarea.placeholder-grey::placeholder {
   color: $grey;
+  font-size: 14px;
 }
 .bg-green {
   background-color: $green;
@@ -37,8 +35,17 @@ border-bottom: 2px dashed $green;
 .border-dashed-blue {
   border: 2px dashed $blue;
 }
+.border-dashed-green {
+  border: 2px dashed $green;
+}
 .circle {
   border-radius: 50%;
+}
+.font-title {
+  font-size: 40px;
+  @media (max-width:767px) {
+    font-size: 28px;
+  }
 }
 .font-size-12px {
   font-size: 12px;
@@ -70,6 +77,12 @@ border-bottom: 2px dashed $green;
 .font-size-80px {
   font-size: 80px;
 }
+.font-size-12px-lg-16px {
+  font-size: 12px;
+  @media (min-width: 992px) {
+    font-size: 16px;
+  }
+}
 .font-size-24px-responsive {
   font-size: 24px;
   @media (max-width: 991px) {
@@ -91,8 +104,18 @@ border-bottom: 2px dashed $green;
 .font-style-normal {
   font-style: normal;
 }
+.font-weight-regular {
+  font-weight: 400;
+}
 .font-weight-light {
 font-weight: 300px;
+}
+.link-green {
+  color: $green;
+   &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
 }
 .hide-under-md {
   @media (max-width: 767px) {
@@ -117,8 +140,18 @@ font-weight: 300px;
 .hyphen-for-title:after {
   right: -30px;
 }
+.link_invisible {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
 .letter-spacing {
   letter-spacing: .08rem;
+}
+.letter-spacing-1px {
+  letter-spacing: 1px;
 }
 .letter-spacing-4px{
   letter-spacing: 4px;
@@ -141,6 +174,12 @@ font-weight: 300px;
 .min-width-100px {
   min-width: 100px;
 }
+.max-width-100-66px {
+  max-width: calc(100% - 66px)
+}
+.max-width-100-300px {
+  max-width: calc(100% - 300px)
+}
 .max-width-105px {
   max-width: 105px;
 }
@@ -150,6 +189,7 @@ font-weight: 300px;
 .max-width-1140px {
   max-width: 1140px;
 }
+
 .min-height-250px {
   min-height: 250px;
 }
@@ -195,6 +235,9 @@ font-weight: 300px;
 .text-grey {
   color: $grey;
 }
+.text-decoration-none {
+  text-decoration: none;
+}
 .top-0 {
   top: 0;
 }
@@ -203,6 +246,12 @@ font-weight: 300px;
 }
 .w-55 {
   width: 55%;
+}
+.width-75-md-100 {
+  width: 75%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 }
 .width-33 {
   width: 33%;
@@ -217,7 +266,6 @@ font-weight: 300px;
   background: $white;
   z-index: 3;
 }
-
 input.placeholder-grey::placeholder {
   color: $grey;
 }

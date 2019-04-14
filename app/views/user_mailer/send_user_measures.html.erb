@@ -1,18 +1,20 @@
 <p>Bonjour, <%= @user.first_name.capitalize %></p>
 <p>Nous sommes heureux de vous faire parvenir votre tableau de mesures personnalisées.</p>
 <p>Nous vous rappelons que vous pouvez à tout moment accéder à vos mesures ou les modifier dans votre espace. </p>
-<table style="border-collapse: collapse; margin: 5px auto;">
+<table style="border-collapse: collapse; margin: 5px auto;width: 80%">
   <thead>
     <tr>
-      <th style="border: 1px solid #3D7296; padding:10px 40px">Nom</th>
-      <th style="border: 1px solid #3D7296; padding:10px 40px">Mesure</th>
+      <th style="border: 1px solid #A6A6A6; padding:10px 40px; background: #85C4BF; color: white">Nom</th>
+      <th style="border: 1px solid #A6A6A6; padding:10px 40px; background: #85C4BF; color: white">Description</th>
+      <th style="border: 1px solid #A6A6A6; padding:10px 40px; background: #85C4BF; color: white">Mesure</th>
     </tr>
   </thead>
   <tbody>
-    <% @user.user_measures.each do |user_measure| %>
+    <% @user.user_measures.filtered_by_important.each do |user_measure| %>
       <tr>
-        <td style="padding:10px 40px; border: 1px solid #3D7296"><%= user_measure.measure.name %></td>
-        <td style="padding:10px 40px; border: 1px solid #3D7296"><%= user_measure.value %></td>
+        <td style="padding:10px 40px; border: 1px solid #A6A6A6; color: #85C4BF"><%= user_measure.measure.name %></td>
+        <td style="padding:10px 40px; border: 1px solid #A6A6A6"><%= user_measure.measure.description %></td>
+        <td style="padding:10px 40px; border: 1px solid #A6A6A6"><%= user_measure.value %></td>
       </tr>
     <% end %>
   </tbody>

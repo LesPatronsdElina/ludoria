@@ -1,53 +1,17 @@
-<div class="bg-white section-shadow py-5">
+<div class="bg-white section-shadow py-4">
   <div class="container">
-    <h2 class="text-green font-size-40px letter-spacing font-weight-light hyphen-for-title">Le Blog</h2>
-    <div class="d-none d-md-block">
-      <div class="row my-5">
-        <div class="col-12 col-md-4">
-          <div class="card mx-auto w-100 my-3">
-            <img src="https://images.pexels.com/photos/461035/pexels-photo-461035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+    <h2 class="text-green font-title letter-spacing font-weight-light">- Le Blog - couture & modélisme</h2>
+
+    <div class="card-deck my-4">
+      <% @articles.each do |blog_article|%>
+          <div class="card w-100 my-3">
+            <%= link_to "", blog_path(blog_article), class: "link_invisible" %>
+            <%= default_photo(blog_article.cover_picture, 'card-img-top', blog_article.title) %>
+            <div class="card-body py-3">
+              <h3 class="font-size-12px-lg-16px text-grey font-weight-regular"><%= blog_article.title %></h3>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="card mx-auto w-100 my-3">
-            <img src="https://images.pexels.com/photos/1409217/pexels-photo-1409217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="card mx-auto w-100 my-3">
-            <img src="https://images.pexels.com/photos/461035/pexels-photo-461035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="d-block d-md-none">
-      <div class="row my-5">
-        <div class="col-6">
-          <div class="card mx-auto w-100 my-3">
-            <img src="https://images.pexels.com/photos/1409217/pexels-photo-1409217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
-            <div class="card-body p-2">
-              <p class="card-title">Card title</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card mx-auto w-100 my-3">
-            <img src="https://images.pexels.com/photos/461035/pexels-photo-461035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="...">
-            <div class="card-body p-2">
-              <p class="card-title">Card title</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

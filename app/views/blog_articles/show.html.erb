@@ -1,0 +1,74 @@
+<div class="page-min-height">
+  <div class="container py-5">
+    <div class="d-flex justify-content-center">
+      <h1 class="text-green font-size-40px letter-spacing font-weight-light text-center">- <%= @article.title %> -</h1>
+    </div>
+    <div class="row my-5">
+      <div class="col-md-6 col-lg-5 col-xl-4 mb-3">
+        <% if @article.blog_photos.size == 0 %>
+          <%= default_photo(@article.cover_picture, 'card-img', @article.title) %>
+        <% elsif @article.blog_photos.size == 1%>
+          <%= default_photo(@article.blog_photos.first.photo, 'card-img', @article.blog_photos.first.alt) %>
+        <% else %>
+          <div class="card-columns-small">
+            <% @article.blog_photos.each do |article_photo| %>
+              <div class="card-body-small">
+                <%= default_photo(article_photo.photo, 'card-img', article_photo.alt) %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-md-6 col-lg-7 col-xl-8 py-2">
+        <div class= "text-justify"><%= @article.content.html_safe %></div>
+      </div>
+    </div>
+    <div class="d-none d-md-block">
+      <div class="d-flex align-items-center justify-content-center">
+        <div>
+          <a href="" class= "link-green">
+            <div class="d-flex justify-content-start align-items-center p-3">
+              <div class="frame-50px circle bg-green d-flex justify-content-center align-items-center mr-3"><i class="fab fa-youtube-square text-white font-size-24px"></i></div>
+              <p class="mb-0 max-width-100-66px">Retrouvez - nous sur notre chaîne youtube pour plus d’astuces couture</p>
+            </div>
+          </a>
+          <% if @article.pdf.file %>
+            <div class="d-flex align-items-center justify-content-start border-dashed-green p-3">
+              <div class="frame-50px circle bg-green d-flex justify-content-center align-items-center mr-3"><i class="fa fa-file-pdf text-white"></i></div>
+              <p class= "mb-0 text-dark-grey max-width-100-300px mr-3">Je télécharge gratuitement la totalité des informations du blog dédié à la prise de mesures</p>
+              <%= link_to 'Je télécharge', @article.pdf.url, class: "button-large-green text-center letter-spacing-1px" %></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="d-block d-md-none">
+        <div class="p-2 m-2">
+          <a href="" class= "link-green">
+            <div class="d-flex justify-content-start align-items-center px-3">
+              <div class="frame-50px circle bg-green d-flex justify-content-center align-items-center mr-3"><i class="fab fa-youtube-square text-white font-size-24px"></i></div>
+              <p class="mb-0 max-width-100-66px">Retrouvez - nous sur notre chaîne youtube pour plus d’astuces couture</p>
+            </div>
+          </a>
+        </div>
+        <% if @article.pdf.file %>
+          <div class="row border-dashed-green p-2 m-2">
+            <div class="col-md-7 col-lg-8 col-xl-9 d-flex justify-content-start align-items-center my-1">
+              <div class="frame-50px circle bg-green d-flex justify-content-center align-items-center mr-3"><i class="fa fa-file-pdf text-white"></i></div>
+              <p class= "mb-0 text-dark-grey max-width-100-66px">Je télécharge gratuitement la totalité des informations du blog dédié à la prise de mesures</p>
+            </div>
+            <div class="col-12 col-md-5 col-lg-4 col-xl-3 d-flex justify-content-center align-items-center my-1">
+              <%= link_to 'Je télécharge', @article.pdf.url, class: "button-large-green text-center letter-spacing-1px" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

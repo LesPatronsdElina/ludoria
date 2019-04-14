@@ -2,16 +2,22 @@
   opacity: 1 !important;
 }
 .height-carousel-home {
-  min-height: 300px;
-  @media (max-width: 1199px) {
+  min-height: 210px;
+  @media (max-width: 991px) {
     min-height: 440px;
   }
   @media (max-width: 575px) {
     min-height: 800px;
   }
 }
+.carousel-cards-width {
+  width: 100%;
+  @media (max-width: 991px) {
+    width: 70%;
+  }
+}
 .margin-top-steps-home {
-  margin-top: 90px;
+  margin-top: 30px;
   @media (max-width: 991px) {
     margin-top: 10px;
   }
@@ -22,7 +28,16 @@
 .carousel-quote {
   color: $green;
   height: 200px;
-  margin-top: -20px;
-  font-size: 280px;
+  margin-top: -40px;
+  font-size: 220px;
   font-family: 'Radley', serif;
+  @media (max-width: 991px) {
+    font-size: 150px;
+    margin-top: -5px;
+  }
+   @media (max-width: 767px) {
+    font-size: 80px;
+    margin-top: -30px;
+    height: 100px;
+  }
 }

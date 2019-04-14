@@ -1,13 +1,12 @@
 <div class= "main-navbar text-center">
   <div class="d-none d-md-block">
-    <div class="marginy-12px">
-      <a href="/" class="font-size-48px font-weight-light navbar-title">LUDORIA</a>
+    <div class="my-2">
+      <a href="/" class="font-size-30px font-weight-light navbar-title">LUDORIA</a>
     </div>
     <div class="container">
       <div class="navbar-element">
-
         <%= link_to "Mes Mesures", measures_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
-        <%= link_to "Le Blog", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
+        <%= link_to "Le Blog", blog_index_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%= link_to "La Maison Ludoria", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%= link_to "Les Offres", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
 
@@ -57,7 +56,7 @@
               </div>
               <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
               <div class="my-3">
-                <%= link_to "Le Blog", '/',  class: "navbar-link text-blue" %>
+                <%= link_to "Le Blog", blog_index_path,  class: "navbar-link text-blue" %>
               </div>
               <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
               <div class="my-3">
