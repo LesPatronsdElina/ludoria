@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   get '/legal', to: 'pages#legal', as: 'legal'
+  get '/Mes_mesures', to: 'pages#my_measures', as: 'my_measures'
   get "/download_pdf", to: 'pages#download_pdf'
   root to: 'pages#home'
-  resources :measures, only: [:index]
   resources :users, only: [:edit, :update]
   get '/print_measures', to: 'user#print_measures', as: 'print_user_measures'
   resources :contacts, only: [:create]

@@ -1,8 +1,11 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :legal]
+  skip_before_action :authenticate_user!, only: [:home, :legal, :my_measures]
 
   def home
     @articles = BlogArticle.homepage.first(3)
+  end
+
+  def my_measures
   end
 
   def legal
