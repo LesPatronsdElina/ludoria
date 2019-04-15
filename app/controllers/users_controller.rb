@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
+  skip_after_action :verify_authorized, only: [:update]
 
   def edit
     respond_to do |format|

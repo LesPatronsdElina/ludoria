@@ -1,10 +1,12 @@
 function displayMeasures(content) {
   const target = document.getElementById('user_measure_form');
   target.innerHTML = content;
+  console.log(target);
 };
 function displayFlash(content) {
   const flash = document.getElementById('flash');
   flash.innerHTML = content;
+  console.log(flash);
 };
 
 displayFlash('<%= j render partial: "shared/flashes" %>');
