@@ -22,7 +22,6 @@
   gem 'webpacker'
   gem 'slim'
   gem 'activeadmin'
-  gem 'activeadmin_addons'
   gem 'ckeditor'
   gem 'formadmin'
 
