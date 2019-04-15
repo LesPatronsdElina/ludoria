@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   def about
   end
 
-  def my_measure
+  def my_measures
   end
 
   def download_pdf
