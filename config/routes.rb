@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   get '/legal', to: 'pages#legal', as: 'legal'
-  get '/Mes_mesures', to: 'pages#my_measure', as: 'my_measure'
+  get '/Mes_mesures', to: 'pages#my_measure', as: 'my_measures'
   get '/La_maison_ludoria', to: 'pages#about', as: 'about'
   get "/download_pdf", to: 'pages#download_pdf'
   root to: 'pages#home'
