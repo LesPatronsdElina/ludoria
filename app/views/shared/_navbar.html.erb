@@ -7,7 +7,7 @@
       <div class="navbar-element">
         <%= link_to "Mes Mesures", measures_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%= link_to "Le Blog", blog_index_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
-        <%= link_to "La Maison Ludoria", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
+        <%= link_to "La Maison Ludoria", about_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%= link_to "Les Offres", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
 
         <% if user_signed_in? %>
@@ -48,7 +48,7 @@
               </div>
               <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
               <div class="my-3">
-                <%= link_to "La maison Ludoria", '/',  class: "navbar-link text-blue" %>
+                <%= link_to "La maison Ludoria", about_path,  class: "navbar-link text-blue" %>
               </div>
               <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
               <div class="my-3">
