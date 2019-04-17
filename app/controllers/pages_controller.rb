@@ -5,9 +5,6 @@ class PagesController < ApplicationController
     @articles = BlogArticle.homepage.first(3)
   end
 
-  def my_measures
-  end
-
   def legal
   end
 
