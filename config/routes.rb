@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get '/La_maison_ludoria', to: 'pages#about', as: 'about'
   get "/download_pdf", to: 'pages#download_pdf'
   root to: 'pages#home'
+  resources :measures, only: [:index]
   resources :users, only: [:edit, :update]
   get '/print_measures', to: 'user#print_measures', as: 'print_user_measures'
-  resources :measures, only: [:index]
   resources :contacts, only: [:create]
   resources :blog_articles, as: :blog, only: [:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
