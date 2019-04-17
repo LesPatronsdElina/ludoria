@@ -130,4 +130,4 @@ photo_article2_urls.each do |photo_url|
 end
 puts 'create admin'
 
-User.create(email:"admin@ludoria.com", first_name: "admin", last_name: "ludoria", password: "azerty", admin: true, conditions_validation: true)
+User.create(email:"admin@ludoria.fr", first_name: "admin", last_name: "ludoria", password: "azerty", admin: true, conditions_validation: true)

@@ -11,9 +11,6 @@ class PagesController < ApplicationController
   def about
   end
 
-  def my_measures
-  end
-
   def download_pdf
     send_file(
       "#{Rails.root}/public/documents/guide-de-mesure.pdf",
