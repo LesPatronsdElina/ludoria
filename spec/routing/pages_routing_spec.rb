@@ -7,17 +7,18 @@ RSpec.describe "PagesController Routing", :type => :routing do
       :action => "home"
     )
   end
-  it "properly generates a root route to display the measures page when supplying: '/measures'" do
-    expect(:get => "/Mes_mesures").to route_to(
-      :controller => "measures",
-      :action => "index"
-    )
-  end
 
-  it "properly generates a root route to display the legal page when supplying: '/Mes_mesures'" do
+  it "properly generates a root route to display the legal page when supplying: '/legal'" do
     expect(:get => "/legal").to route_to(
       :controller => "pages",
       :action => "legal"
+    )
+  end
+
+  it "properly generates a root route to display the about page when supplying: '/La_maison_ludoria'" do
+    expect(:get => "/La_maison_ludoria").to route_to(
+      :controller => "pages",
+      :action => "about"
     )
   end
 end

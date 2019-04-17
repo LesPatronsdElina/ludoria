@@ -7,12 +7,16 @@ RSpec.describe "PagesController Integration", type: :request do
       expect(response).to have_http_status(200)
     end
   end
-
-  describe "GET /measures" do
-    it "When go to my measures it display a page" do
-      get measures_path
+  describe "GET /La_maison_ludoria" do
+    it "It has a about page" do
+      get about_path
       expect(response).to have_http_status(200)
     end
   end
-
+  describe "GET /legal" do
+    it "It has legal page" do
+      get legal_path
+      expect(response).to have_http_status(200)
+    end
+  end
 end
