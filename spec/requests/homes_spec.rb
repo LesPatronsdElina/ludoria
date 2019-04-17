@@ -8,9 +8,9 @@ RSpec.describe "PagesController Integration", type: :request do
     end
   end
 
-  describe "GET /Mes_mesures" do
+  describe "GET /measures" do
     it "When go to my measures it display a page" do
-      get my_measures_path
+      get measures_path
       expect(response).to have_http_status(200)
     end
   end

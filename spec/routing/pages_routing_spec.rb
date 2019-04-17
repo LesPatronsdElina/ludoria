@@ -7,10 +7,10 @@ RSpec.describe "PagesController Routing", :type => :routing do
       :action => "home"
     )
   end
-  it "properly generates a root route to display the my_measures page when supplying: '/Mes_mesures'" do
+  it "properly generates a root route to display the measures page when supplying: '/measures'" do
     expect(:get => "/Mes_mesures").to route_to(
-      :controller => "pages",
-      :action => "my_measures"
+      :controller => "measures",
+      :action => "index"
     )
   end
 
