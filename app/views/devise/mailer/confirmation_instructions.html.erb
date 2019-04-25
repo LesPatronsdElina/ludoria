@@ -1,8 +1,10 @@
 <%= content_for(:mail_content) do %>
-  <p>Welcome <%= @email %>!</p>
+  <p>Bonjour et bienvenue !</p>
 
-  <p>You can confirm your account email through the link below:</p>
+  <p>Nous vous remercions de votre inscription et sommes heureux de vous compter parmi nos membres.</p>
+  <p>Afin d’activer votre compte, nous vous invitons à cliquer sur le lien ci-dessous :</p>
 
-  <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+  <p><%= link_to 'Confirmer mon compte', confirmation_url(@resource, confirmation_token: @token) %></p>
 <% end %>
 <%= render 'layout_mailer_devise' %>
