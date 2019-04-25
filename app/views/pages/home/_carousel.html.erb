@@ -14,18 +14,24 @@
                 </div>
               </div>
               <div class="col-12 col-lg-8">
-                <div class="row text-center font-weight-light margin-top-steps-home text-blue">
+                <div class="row text-center font-weight-light margin-top-steps-home text-purple">
                   <div class="col-12 col-md-4">
-                    <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-tshirt text-white"></i></div>
-                    <p class= "max-width-105px font-size-14px mx-auto text-blue mt-3">Je choisis mon patron</p>
+                    <%= link_to link_or_sign_in('measure_path'), class: 'text-decoration-none text-dark-grey picto-link' do %>
+                      <div class="picto-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-tshirt text-white"></i></div>
+                      <p class= "max-width-105px font-size-14px mx-auto text-purple mt-3">Je choisis mon patron</p>
+                    <% end %>
                   </div>
                   <div class="col-12 col-md-4">
-                    <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-ruler text-white"></i></div>
-                    <p class= "max-width-105px font-size-14px mx-auto text-blue mt-3">Je prends et je stocke mes mesures</p>
+                    <%= link_to link_or_sign_in('measures#mesure-table'), class: 'text-decoration-none text-dark-grey picto-link' do %>
+                      <div class="picto-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-ruler text-white"></i></div>
+                      <p class= "max-width-105px font-size-14px mx-auto text-purple mt-3">Je prends et je stocke mes mesures</p>
+                    <% end %>
                   </div>
                   <div class="col-12 col-md-4">
-                    <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-file-pdf text-white"></i></div>
-                    <p class= "max-width-105px font-size-14px mx-auto text-blue mt-3">Je reçois et j'imprime mon patron PDF sur mesure</p>
+                    <%= link_to link_or_sign_in('download_pdf_url'), class: 'text-decoration-none text-dark-grey picto-link' do %>
+                      <div class="picto-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-file-pdf text-white"></i></div>
+                      <p class= "max-width-105px font-size-14px mx-auto text-purple mt-3">Je reçois et j'imprime mon patron PDF sur mesure</p>
+                    <% end %>
                   </div>
                 </div>
               </div>
@@ -44,53 +50,61 @@
           </div>
           <div class="carousel-item">
             <div class="row carousel-cards-width mx-auto">
-              <div class="col-12 col-sm-6 col-lg-3">
-                <div class="flip-card mx-auto">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front px-1 justify-content-center d-flex align-items-center frame-140px frame-green text-white">
-                      <div>
-                        <p class= "mb-0">Des patrons</p>
-                        <p>sur-mesure</p>
-                      </div>
+              <div class="col-12 col-sm-6 col-lg-3 p-0">
+
+
+
+                <div class="position-relative frame-160px font-size-14px m-3">
+                  <div class="hover-hide position-full position-absolute bg-green">
+                    <div class="bg-green border-dashed-white margin-10px frame-140px text-white d-flex align-items-center justify-content-center text-center  px-2">
+                      <p class= "mb-0">Des patrons<br>sur-mesure</p>
                     </div>
-                    <div class="flip-card-back px-1 d-flex align-items-center frame-140px frame-white-border-blue text-blue">
-                      <p>Un patron sur-mesure, unique, défini pour et par vos mensurations</p>
+                  </div>
+                  <div class="hover-show position-full position-absolute bg-white border-green">
+                    <div class="border-dashed-green bg-white margin-10px frame-140px text-green d-flex align-items-center justify-content-center text-center px-2">
+                      <p class="mb-0 font-weight-light">Un patron sur-mesure, unique, défini pour et par vos mensuration</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-3">
-                <div class="flip-card mx-auto">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front px-1 d-flex align-items-center frame-140px frame-white-border-green text-green">
-                      <p>Une présentation professionnelle</p>
+              <div class="col-12 col-sm-6 col-lg-3 p-0">
+                <div class="position-relative frame-160px font-size-14px m-3">
+                  <div class="hover-hide position-full position-absolute bg-green">
+                    <div class="bg-green border-dashed-white margin-10px frame-140px text-white d-flex align-items-center justify-content-center text-center  px-2">
+                      <p class= "mb-0">Une présentation professionnelle</p>
                     </div>
-                    <div class="flip-card-back px-1 d-flex align-items-center frame-140px frame-blue text-white">
-                      <p>Présentation et imbrications professionnelles des patrons</p>
+                  </div>
+                  <div class="hover-show position-full position-absolute bg-white border-green">
+                    <div class="border-dashed-green bg-white margin-10px frame-140px text-green d-flex align-items-center justify-content-center text-center px-2">
+                      <p class="mb-0 font-weight-light">Présentation et imbrications professionnelles des patrons</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-3">
-                <div class="flip-card mx-auto">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front px-1 d-flex align-items-center frame-140px frame-green text-white">
-                      <p>Un suivi dans votre avancement</p>
+              <div class="col-12 col-sm-6 col-lg-3 p-0">
+                <div class="position-relative frame-160px font-size-14px m-3">
+                  <div class="hover-hide position-full position-absolute bg-green">
+                    <div class="bg-green border-dashed-white margin-10px frame-140px text-white d-flex align-items-center justify-content-center text-center  px-2">
+                      <p class= "mb-0">Un suivi dans votre avancement</p>
                     </div>
-                    <div class="flip-card-back px-1 d-flex align-items-center frame-140px frame-white-border-blue text-blue">
-                      <p>Prise de mesures et assemblage guidés pas à pas</p>
+                  </div>
+                  <div class="hover-show position-full position-absolute bg-white border-green">
+                    <div class="border-dashed-green bg-white margin-10px frame-140px text-green d-flex align-items-center justify-content-center text-center px-2">
+                      <p class="mb-0 font-weight-light">Prise de mesures et assemblage guidés pas à pas</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-3">
-                <div class="flip-card mx-auto">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front px-1 d-flex align-items-center frame-140px frame-white-border-green text-green">
-                      <p>Une mise-à-jours continuelle</p>
+              <div class="col-12 col-sm-6 col-lg-3 p-0">
+                <div class="position-relative frame-160px font-size-14px m-3 ">
+                  <div class="hover-hide position-full position-absolute bg-green">
+                    <div class="bg-green border-dashed-white margin-10px frame-140px text-white d-flex align-items-center justify-content-center text-center  px-2">
+                      <p class= "mb-0">Une mise-à-jours continuelle</p>
                     </div>
-                    <div class="flip-card-back px-1 d-flex align-items-center frame-140px frame-blue text-white">
-                      <p class="mb-0">Des modèles régulièrement renouvelés et mis à jours, pour s'adapter au mieux à votre corps</p>
+                  </div>
+                  <div class="hover-show position-full position-absolute bg-white border-green">
+                    <div class="border-dashed-green bg-white margin-10px frame-140px text-green d-flex align-items-center justify-content-center text-center px-2">
+                      <p class="mb-0 font-weight-light">Prise de mesures et assemblage guidés pas à pas</p>
                     </div>
                   </div>
                 </div>
@@ -130,15 +144,15 @@
         </div>
         <div class="col-4">
           <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-tshirt text-white"></i></div>
-          <p class= "max-width-105px mx-auto text-blue font-size-12px mt-3">Je choisis mon patron</p>
+          <p class= "max-width-105px mx-auto text-purple font-size-12px mt-3">Je choisis mon patron</p>
         </div>
         <div class="col-4">
           <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-ruler text-white"></i></div>
-          <p class= "max-width-105px mx-auto text-blue font-size-12px mt-3">Je prends et je stocke mes mesures</p>
+          <p class= "max-width-105px mx-auto text-purple font-size-12px mt-3">Je prends et je stocke mes mesures</p>
         </div>
         <div class="col-4">
           <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-file-pdf text-white"></i></div>
-           <p class= "max-width-105px mx-auto text-blue font-size-12px mt-3">Je reçois et j'imprime mon patron PDF sur mesure</p>
+           <p class= "max-width-105px mx-auto text-purple font-size-12px mt-3">Je reçois et j'imprime mon patron PDF sur mesure</p>
         </div>
       </div>
     </div>

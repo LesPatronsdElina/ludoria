@@ -6,10 +6,10 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  background: $white;
-  border-top: 5px solid $green;
+  background: $green;
   border-bottom: 2px solid $green;
   height: 100px;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   p, a {
     margin-bottom: 3px;
   }
@@ -33,10 +33,10 @@
   }
 }
 a.navbar-title {
-  color: $green;
+  color: $white;
  &:hover {
   text-decoration: none;
-  color: $green;
+  color: $white;
  }
 }
 /* Logo */
@@ -58,13 +58,13 @@ a.navbar-title {
 
 /* Navbar link */
 .navbar-ludoria-link {
-  color: $green;
+  color: $white;
   position: relative;
   font-size: 15px;
   cursor: pointer;
 }
 .navbar-ludoria-link:hover {
-  color: $green;
+  color: $white;
   text-decoration:none;
   font-style: italic;
 }
@@ -155,7 +155,7 @@ a.navbar-title {
   height: 2px;
   margin-left: auto;
   margin-right: auto;
-  background-color: $green;
+  background-color: $white;
   margin-top: 7px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -169,7 +169,7 @@ a.navbar-title {
   top: 0px;
   height: 50px;
   width: 50px;
-  background: $blue;
+  background: $purple;
   border-radius: 50%;
 }
 /* Hamburger Animation */
@@ -252,11 +252,11 @@ nav a {
   transition: all 0.3s ease;
 }
 nav {
-  .text-blue: {
-    color: $blue;
+  .text-purple: {
+    color: $purple;
   }
-  .text-blue:hover {
-    color: $blue;
+  .text-purple:hover {
+    color: $purple;
   }
 }
 nav a:hover {

@@ -1,0 +1,16 @@
+.picto-link {
+  color: $dark-grey;
+  &:hover {
+    color: $dark-grey;
+    div.bg-green, div.picto-green {
+      background-color: $dark-green;
+    }
+  }
+}
+.picto-green {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: $green;
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}

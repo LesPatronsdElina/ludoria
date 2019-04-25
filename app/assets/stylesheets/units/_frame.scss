@@ -14,16 +14,16 @@
   outline: $green solid 2px;
   outline-offset: 8px;
 }
-.frame-blue {
-  background: $blue;
+.frame-purple {
+  background: $purple;
   border: 2px dashed $white;
-  outline: $blue solid 10px;
+  outline: $purple solid 10px;
 }
-.frame-white-border-blue {
+.frame-white-border-purple {
   background: $white;
-  border: 2px dashed $blue;
+  border: 2px dashed $purple;
   outline-offset: 8px;
-  outline: $blue solid 2px;
+  outline: $purple solid 2px;
 }
 .frame-50px {
   height: 50px;
