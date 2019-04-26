@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
   config.sort_order = 'last_name_asc'
-  permit_params :first_name, :last_name, :email, :password, :password_confirmation
+  permit_params :first_name, :last_name, :email, :password, :password_confirmation, :conditions_validation
 
   controller do
     def update
@@ -40,6 +40,7 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :conditions_validation
       f.input :first_name
       f.input :last_name
       f.button :submit
