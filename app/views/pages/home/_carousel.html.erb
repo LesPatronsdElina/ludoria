@@ -143,16 +143,22 @@
           </div>
         </div>
         <div class="col-4">
-          <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-tshirt text-white"></i></div>
-          <p class= "max-width-105px mx-auto text-purple font-size-12px mt-3">Je choisis mon patron</p>
+          <%= link_to link_or_sign_in('measure_path'), class: 'text-decoration-none text-dark-grey picto-link' do %>
+            <div class="picto-green frame-50px mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-tshirt text-white"></i></div>
+            <p class= "max-width-105px font-size-14px mx-auto text-purple mt-3">Je choisis mon patron</p>
+          <% end %>
         </div>
         <div class="col-4">
-          <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-ruler text-white"></i></div>
-          <p class= "max-width-105px mx-auto text-purple font-size-12px mt-3">Je prends et je stocke mes mesures</p>
+          <%= link_to link_or_sign_in('measures#mesure-table'), class: 'text-decoration-none text-dark-grey picto-link' do %>
+            <div class="picto-green frame-50px mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-ruler text-white"></i></div>
+            <p class= "max-width-105px font-size-14px mx-auto text-purple mt-3">Je prends et je stocke mes mesures</p>
+          <% end %>
         </div>
         <div class="col-4">
-          <div class="frame-50px circle bg-green mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-file-pdf text-white"></i></div>
-           <p class= "max-width-105px mx-auto text-purple font-size-12px mt-3">Je reçois et j'imprime mon patron PDF sur mesure</p>
+          <%= link_to link_or_sign_in('download_pdf_url'), class: 'text-decoration-none text-dark-grey picto-link' do %>
+            <div class="picto-green frame-50px mx-auto d-flex justify-content-center align-items-center"><i class="fa fa-file-pdf text-white"></i></div>
+            <p class= "max-width-105px font-size-14px mx-auto text-purple mt-3">Je reçois et j'imprime mon patron PDF sur mesure</p>
+          <% end %>
         </div>
       </div>
     </div>
