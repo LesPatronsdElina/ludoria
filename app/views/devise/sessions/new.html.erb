@@ -10,14 +10,14 @@
             <%= f.input :email,
                         placeholder: 'email',
                         label: false,
-                        input_html: { autocomplete: "email", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3"} %>
+                        input_html: { autocomplete: "email", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3 focus-grey"} %>
             <%= f.input :password,
-                        placeholder: 'password',
+                        placeholder: 'mot de passe',
                         label: false,
-                        input_html: { autocomplete: "current-password", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3" } %>
+                        input_html: { autocomplete: "current-password", class: "form-control border-radius-20px-important font-size-14px-important text-dark-grey py-1 px-3 my-3 focus-grey" } %>
 
           <div class="form-actions">
-            <%= f.submit "Se connecter", class: 'px-4 py-2 w-75 text-white bg-green border-radius-20px border-0' %>
+            <%= f.submit "Se connecter", class: 'px-4 py-2 w-75 text-white bg-green border-radius-20px border-0 outline-none' %>
           </div>
         <% end %>
         <div class="position-bottom-right text-right">

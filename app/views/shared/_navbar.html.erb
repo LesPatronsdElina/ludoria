@@ -1,14 +1,14 @@
 <div class= "main-navbar text-center">
   <div class="d-none d-md-block">
-    <div class="my-2">
-      <a href="/" class="font-size-30px font-weight-light navbar-title">LUDORIA</a>
+    <div>
+      <a href="/" class="font-size-40px font-weight-light navbar-title">LUDORIA</a>
     </div>
     <div class="container">
       <div class="navbar-element">
         <%= link_to "Mes Mesures", measures_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%= link_to "Le Blog", blog_index_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
-        <%= link_to "La Maison Ludoria", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
-        <%= link_to "Les Offres", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
+        <%= link_to "La Maison Ludoria", about_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
+      <!--   <%#= link_to "Les Offres", "/", class: "navbar-mihivai-item navbar-ludoria-link" %> -->
 
         <% if user_signed_in? %>
           <%= link_to t('Se déconnecter'), destroy_user_session_path, method: :delete , class: "navbar-mihivai-item navbar-ludoria-link"%>
@@ -29,47 +29,47 @@
       </label>
       <div class="nav">
         <div class="nav-wrapper">
-          <nav class= "d-flex align-item-center border-dashed-blue">
+          <nav class= "d-flex align-item-center border-dashed-purple">
             <div class="max-width-240px mx-auto text-right">
               <% if user_signed_in? %>
                 <div class="my-3">
-                  <%= link_to "Se Déconnecter", destroy_user_session_path, class: "navbar-link text-blue", method: :delete %>
+                  <%= link_to "Se Déconnecter", destroy_user_session_path, class: "navbar-link text-purple", method: :delete %>
                 </div>
               <% else %>
                 <div class="my-3">
-                  <%= link_to "Mon compte", new_user_session_path,  class: "navbar-link text-blue" %>
+                  <%= link_to "Mon compte", new_user_session_path,  class: "navbar-link text-purple" %>
                 </div>
                 <div class="text-grey font-italic font-weight-light"></div>
               <% end %>
-              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <div class="border-bottom-dashed-purple w-75 ml-auto"></div>
               <div class="my-3">
-                <%= link_to "Mes mesures", measures_path,  class: "navbar-link text-blue" %>
+                <%= link_to "Mes mesures", measures_path,  class: "navbar-link text-purple" %>
                 <div class="text-grey font-italic font-weight-light"></div>
               </div>
-              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <div class="border-bottom-dashed-purple w-75 ml-auto"></div>
               <div class="my-3">
-                <%= link_to "La maison Ludoria", '/',  class: "navbar-link text-blue" %>
+                <%= link_to "La maison Ludoria", about_path,  class: "navbar-link text-purple" %>
               </div>
-              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+              <!-- <div class="border-bottom-dashed-purple w-75 ml-auto"></div>
               <div class="my-3">
-                <%= link_to "Les offres", '/',  class: "navbar-link text-blue" %>
+                <%#= link_to "Les offres", '/',  class: "navbar-link text-purple" %>
+              </div> -->
+              <div class="border-bottom-dashed-purple w-75 ml-auto"></div>
+              <div class="my-3">
+                <%= link_to "Le Blog", blog_index_path,  class: "navbar-link text-purple" %>
               </div>
-              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
+             <!--  <div class="border-bottom-dashed-purple w-75 ml-auto"></div>
               <div class="my-3">
-                <%= link_to "Le Blog", blog_index_path,  class: "navbar-link text-blue" %>
-              </div>
-              <div class="border-bottom-dashed-blue w-75 ml-auto"></div>
-              <div class="my-3">
-              <%= link_to "Le sur mesure", '/',  class: "navbar-link text-blue" %>
+              <%#= link_to "Le sur mesure", '/',  class: "navbar-link text-purple" %>
                 <div class="text-grey font-italic font-weight-light"></div>
-              </div>
+              </div> -->
             </div>
           </nav>
         </div>
       </div>
     </div>
   </div>
-  <div class="border-bottom-dashed-green"></div>
+  <div class="border-top-white-dashed mt-1"></div>
 </div>
 <div class="navbar-height"></div>
 

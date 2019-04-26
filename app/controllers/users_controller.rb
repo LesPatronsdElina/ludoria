@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update]
+  skip_after_action :verify_authorized, only: [:update]
 
   def edit
     respond_to do |format|
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
   def set_user
     @user = current_user
   end
-  private
+
   def user_measures_params
     params.require(:user).permit(user_measures_attributes:[:value, :id])
   end

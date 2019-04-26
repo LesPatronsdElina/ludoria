@@ -1,10 +1,16 @@
 .table-border-right-bottom {
   th, td {
-    color: $blue;
+    color: $purple;
     font-weight: 300;
-    border-bottom: 1px solid $blue;
-    border-right: 1px solid $blue;
-    padding: 10px
+    border-bottom: 1px solid $purple;
+    border-right: 1px solid $purple;
+    padding: 5px;
+  }
+  input:hover {
+    outline: $grey auto 2px;
+  }
+  input:focus {
+    outline: $green auto 3px;
   }
 }
 table {
