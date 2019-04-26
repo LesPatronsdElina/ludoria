@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/download_pdf", to: 'pages#download_pdf'
   root to: 'pages#home'
   resources :measures, only: [:index]
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:update]
   get '/print_measures', to: 'user#print_measures', as: 'print_user_measures'
   resources :contacts, only: [:create]
   resources :blog_articles, as: :blog, only: [:index, :show]
