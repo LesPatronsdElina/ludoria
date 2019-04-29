@@ -35,6 +35,9 @@
   end
 
   group :development, :test do
+    gem 'rspec-rails'
+    gem 'shoulda-matchers'
+    gem "capybara"
     gem 'pry-byebug'
     gem 'pry-rails'
     gem 'listen', '~> 3.0.5'
