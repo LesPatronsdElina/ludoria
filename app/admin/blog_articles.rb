@@ -57,7 +57,7 @@ ActiveAdmin.register BlogArticle do
         f.button :submit
         end
       end
-      tab 'photos de l Article' do
+      tab 'Photos de l Article' do
         f.inputs do
           f.has_many :blog_photos, heading: 'Photo Details', allow_destroy: true do |photo|
             photo.input :photo, as: :file, hint: cl_image_tag(photo.object.photo.url),  label: "Importer une photo"
