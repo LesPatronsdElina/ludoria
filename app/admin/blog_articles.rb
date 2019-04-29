@@ -48,7 +48,7 @@ ActiveAdmin.register BlogArticle do
           f.button :submit
         end
       end
-      tab 'Données Meta de l Article' do
+      tab "Données Meta de l'Article" do
         f.inputs do
           f.has_many :blog_meta, heading: 'Meta Details', allow_destroy: true do |meta|
             meta.input :title, collection: ['title', 'description', 'image']
