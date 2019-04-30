@@ -11,7 +11,7 @@ class BlogArticle < ApplicationRecord
 
   mount_uploader :pdf, PhotoUploader
   mount_uploader :cover_picture, PhotoUploader
-
+  validates :cover_picture, presence: true
   def self.homepage
     where(visible_on_home: true)
   end
