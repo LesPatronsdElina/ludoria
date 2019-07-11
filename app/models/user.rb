@@ -5,6 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          #:confirmable
+
   has_many :user_measures, dependent: :destroy
   accepts_nested_attributes_for :user_measures
 
