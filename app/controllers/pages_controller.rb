@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :legal, :about]
+  skip_before_action :authenticate_user!, only: [:home, :legal, :about, :download_pdf]
 
   def home
     @articles = BlogArticle.homepage.first(3)
