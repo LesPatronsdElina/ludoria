@@ -3,6 +3,7 @@ BlogPhoto.destroy_all
 BlogArticle.destroy_all
 UserMeasure.destroy_all
 Measure.destroy_all
+Event.destroy_all
 User.destroy_all
 
 puts "create Measure"
@@ -131,3 +132,10 @@ end
 puts 'create admin'
 
 User.create(email:"admin@ludoria.fr", first_name: "admin", last_name: "ludoria", password: "azerty", admin: true, conditions_validation: true)
+
+
+puts 'Create Event'
+
+e = Event.new(name: 'Atelier Prise de Mesure', place: 'Espace Chifoumi - Bordeaux', date: DateTime.now)
+e.remote_picture_url = 'https://images.pexels.com/photos/461035/pexels-photo-461035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+e.save
