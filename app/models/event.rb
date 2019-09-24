@@ -15,4 +15,8 @@ class Event < ApplicationRecord
   def hour_slot
     "#{date.strftime("%Hh%M")}"
   end
+
+  def in_the_past?
+    date < DateTime.now
+  end
 end
