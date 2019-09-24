@@ -336,3 +336,9 @@ font-weight: 300px;
 input.placeholder-grey::placeholder {
   color: $grey;
 }
+.transition {
+  transition: .6s;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}

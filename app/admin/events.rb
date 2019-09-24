@@ -42,7 +42,7 @@ ActiveAdmin.register Event do
       f.input :picture, as: :file, hint: cl_image_tag(f.object.picture.url), label: "Importer une photo"
       f.input :remote_picture_url, label: "Photo URL"
       f.input :picture_cache, as: :hidden
-      f.input :date, as: :date_time_picker
+      f.input :date, as: :date_time_picker, class: 'input-w-100'
       f.input :place
       f.input :description
       f.input :inscription_link
