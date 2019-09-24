@@ -4,8 +4,12 @@ class Event < ApplicationRecord
   validates :picture, presence: true
   validates :name, presence: true
 
+  scope :ordered_by_date, -> { order(date: :desc)}
+  scope :visibles, -> { where(visible: true) }
+
+
   def complete_date
-    "#{date.strftime("%A %d %B %Y")} à #{date.strftime("%Hh%M")}"
+    "#{date.strftime("%d/%m/%Y")} - #{date.strftime("%Hh%M")}"
   end
 
   def hour_slot

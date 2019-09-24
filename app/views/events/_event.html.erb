@@ -1,0 +1,18 @@
+<div class="col-12 col-sm-6 col-md-4">
+  <div class="card text-center">
+    <div class="position-relative">
+      <%= default_photo( event.picture, 'card-img-top', event.name) %>
+    <div class="ribon-right bg-green position-ribon-card mw-100">
+      <div class="text-one-line font-weight-regular">
+        <%= event.complete_date %>
+      </div>
+    </div>
+
+    </div>
+    <div class="card-body">
+      <h3 class="card-title text-left font-size-12px-lg-16px text-dark-grey font-weight-regular"><%= event.name %></h3>
+      <p class="card-text font-size-10px-lg-12px text-left font-weight-thin text-dark-grey"><%= event.place %></p>
+    </div>
+  </div>
+
+</div>

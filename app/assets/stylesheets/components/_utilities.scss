@@ -102,6 +102,14 @@ border-bottom: 2px dashed $green;
     font-size: 16px;
   }
 }
+
+.font-size-10px-lg-12px {
+  font-size: 10px;
+  @media (min-width: 992px) {
+    font-size: 12px;
+  }
+}
+
 .font-size-24px-responsive {
   font-size: 24px;
   @media (max-width: 991px) {
