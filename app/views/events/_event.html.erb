@@ -1,7 +1,7 @@
 <div class="col-12 col-sm-6 col-md-4 pb-2">
   <div class="card text-center <%= "opacity05" if event.in_the_past? %>">
     <div class="position-relative">
-      <%= default_photo( event.picture, 'card-img-top', event.name) %>
+      <%= photo_16_9(event.picture, 'card-img-top h-auto', event.name)  %>
       <div class="ribon-right bg-green position-ribon-card mw-100">
         <div class="text-one-line font-weight-regular">
           <%= event.complete_date %>
