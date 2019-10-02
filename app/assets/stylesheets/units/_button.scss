@@ -20,6 +20,17 @@
     background-color: $dark-green;
   }
 }
+.button-small-green {
+ padding: 5px 20px;
+ border-radius: 20px;
+ color: $white;
+ background-color: $green;
+ &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $dark-green;
+  }
+}
 .button-white {
   padding:  10px 20px;
   background: $white;

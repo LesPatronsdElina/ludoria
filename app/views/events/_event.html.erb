@@ -1,0 +1,27 @@
+<div class="col-12 col-sm-6 col-md-4 pb-2">
+  <div class="card text-center <%= "opacity05" if event.in_the_past? %>">
+    <div class="position-relative">
+      <%= photo_16_9(event.picture, 'card-img-top h-auto', event.name)  %>
+      <div class="ribon-right bg-green position-ribon-card mw-100">
+        <div class="text-one-line font-weight-regular">
+          <%= event.complete_date %>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title text-left font-size-12px-lg-16px text-dark-grey font-weight-regular"><%= event.name %></h3>
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="card-text m-0 font-size-10px-lg-12px text-left font-weight-thin text-dark-grey"><%= event.place %></p>
+        <% if (!event.description.nil? || !event.inscription_link.nil?) %>
+          <a class="collapse-chevron" data-toggle="collapse" href="#event_<%= event.id %>" role="button" aria-expanded="false" aria-controls="event_<%= event.id %>">
+            <%= image_tag 'down-chevron.svg', height: 15, class: "transition opacity05" %>
+          </a>
+        <% end %>
+      </div>
+      <div class="collapse mt-2" id="event_<%= event.id %>">
+        <p class="card-text m-0 font-size-10px-lg-12px text-center font-weight-thin text-dark-grey mb-2"><%= event.description %></p>
+        <%= link_to "S'inscrire", event.inscription_link , class: "button-small-green font-size-10px-lg-12px" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@
     <div class="container">
       <div class="navbar-element">
         <%= link_to "Mes Mesures", measures_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
+        <%= link_to "Agenda", events_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%= link_to "Le Blog", blog_index_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%#= link_to "La Maison Ludoria", about_path, class: "navbar-mihivai-item navbar-ludoria-link" %>
         <%#= link_to "Les Offres", "/", class: "navbar-mihivai-item navbar-ludoria-link" %>
@@ -47,6 +48,11 @@
                 <div class="text-grey font-italic font-weight-light"></div>
               </div>
               <div class="border-bottom-dashed-purple w-75 ml-auto"></div>
+              <div class="my-3">
+                <%= link_to "Agenda", events_path,  class: "navbar-link text-purple" %>
+                <div class="text-grey font-italic font-weight-light"></div>
+              </div>
+              <!-- <div class="border-bottom-dashed-purple w-75 ml-auto"></div> -->
               <!-- <div class="my-3">
                 <%#= link_to "La maison Ludoria", about_path,  class: "navbar-link text-purple" %>
               </div> -->

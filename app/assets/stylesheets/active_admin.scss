@@ -1,3 +1,4 @@
+@import 'activeadmin_addons/all';
 @import 'formadmin/formadmin';
 
 // Overriding any non-variable SASS must be done after the fact.
@@ -150,4 +151,8 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   white-space: normal !important;
   height: auto !important
+}
+
+.input-w-100 {
+  width: calc(80% - 20px) !important;
 }

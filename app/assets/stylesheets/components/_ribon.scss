@@ -1,0 +1,71 @@
+.position-ribon-card {
+  position: absolute;
+  right: -15px;
+  bottom: -10px;
+  // @media (max-width: 767px) {
+  //   top: 5px;
+  // }
+}
+.position-ribon-frame-white {
+  position: absolute;
+  left: -15px;
+  top: 35px;
+  @media (max-width: 767px) {
+    top: 10px;
+  }
+}
+.position-ribon-top-right {
+  position: absolute;
+  right: -15px;
+  top: 10px;
+}
+.ribon-right {
+  padding: 5px 10px;
+  font-size: 12px;
+  color: white;
+  // border-radius: 3px 3px 0px 3px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    .text-one-line {
+      width: 200px;
+    }
+  }
+}
+.ribon-right-back {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 15px solid transparent;
+  border-top-style: solid;
+  border-top-width: 10px;
+  right: -10px;
+  top: 5px;
+  z-index: 0;
+}
+
+.ribon-left {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: white;
+  border-radius: 3px 3px 3px 0px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+    .text-one-line {
+      width: 200px;
+    }
+  }
+}
+.ribon-left-back {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-top-style: solid;
+  border-top-width: 10px;
+  left: -10px;
+  top: 5px;
+  z-index: 0;
+}
+

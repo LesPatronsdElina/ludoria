@@ -24,6 +24,7 @@
   gem 'activeadmin'
   gem 'ckeditor'
   gem 'formadmin'
+  gem 'activeadmin_addons'
 
   # gem 'wicked_pdf'
   # gem 'wkhtmltopdf-binary'
