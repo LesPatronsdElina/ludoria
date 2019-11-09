@@ -9,7 +9,7 @@
   gem 'rails', '5.2.2'
   gem 'redis'
   gem 'cloudinary', '~> 1.9.1'
-  gem 'carrierwave', '~> 1.2'
+  gem 'carrierwave', '~> 1.3'
   gem "pundit"
   gem 'jquery-rails'
   #gem 'bootstrap', '~> 4.1.1'
@@ -45,5 +45,4 @@
     gem 'spring'
     gem 'spring-watcher-listen', '~> 2.0.0'
     gem 'dotenv-rails'
-    gem 'spring-watcher-listen', '~> 2.0.0'
   end
